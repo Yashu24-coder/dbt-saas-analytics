@@ -1,0 +1,27 @@
+version: 2
+
+exposures:
+  - name: mrr_dashboard
+    label: Finance MRR dashboard
+    type: dashboard
+    maturity: high
+    url: https://bi.example.com/dashboards/mrr
+    description: Monthly MRR, net new MRR and ARR for the finance review.
+    depends_on:
+      - ref('mart_mrr_summary')
+    owner:
+      name: Finance analytics
+      email: finance@example.com
+
+  - name: retention_review
+    label: Retention review deck
+    type: dashboard
+    maturity: medium
+    url: https://bi.example.com/dashboards/retention
+    description: Cohort retention used in the monthly customer review.
+    depends_on:
+      - ref('mart_churn_cohorts')
+      - ref('mart_revenue_by_plan')
+    owner:
+      name: Customer success
+      email: cs@example.com

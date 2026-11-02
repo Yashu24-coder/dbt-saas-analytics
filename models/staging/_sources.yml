@@ -1,0 +1,21 @@
+version: 2
+
+sources:
+  - name: raw
+    description: >
+      Raw billing exports, read in place from CSV by the DuckDB adapter - no load
+      step and no seeds. Every column is text because the exports are text;
+      typing happens in staging.
+    meta:
+      external_location: "read_csv_auto('data/raw/{name}.csv', all_varchar = true)"
+    tables:
+      - name: plans
+        description: One row per plan SKU.
+      - name: accounts
+        description: One row per customer account.
+      - name: subscriptions
+        description: One row per subscription period. An upgrade ends one row and starts another.
+      - name: invoices
+        description: Monthly invoices, including void credit notes as negative amounts.
+      - name: payments
+        description: One row per successful payment against an invoice.

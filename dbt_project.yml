@@ -1,0 +1,28 @@
+name: 'saas_analytics'
+version: '1.0.0'
+config-version: 2
+
+profile: 'saas_analytics'
+
+model-paths: ["models"]
+snapshot-paths: ["snapshots"]
+macro-paths: ["macros"]
+test-paths: ["tests"]
+target-path: "target"
+clean-targets: ["target", "dbt_packages"]
+
+vars:
+  # 24 months of history, ending the month before the current one
+  analysis_end_month: '2026-10-01'
+
+models:
+  saas_analytics:
+    staging:
+      +materialized: view
+      +schema: staging
+    intermediate:
+      +materialized: view
+      +schema: intermediate
+    marts:
+      +materialized: table
+      +schema: marts

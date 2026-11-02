@@ -1,0 +1,12 @@
+# Committed on purpose: the DuckDB target needs no credentials, so a reviewer
+# can clone and run `dbt build` without setting anything up.
+saas_analytics:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: "data/warehouse/saas.duckdb"
+      threads: 1
+
+# threads: 1 on purpose - DuckDB is a single-writer database, and the seed
+# step must be visible to the models that follow it in the same run.

@@ -1,0 +1,15 @@
+{
+  "accounts": 180,
+  "subscriptions": 207,
+  "invoices": 2298,
+  "mrr_rows": 2298,
+  "months": 24,
+  "latest_month": "2026-10-01",
+  "mrr_usd": 248047.0,
+  "arr_usd": 2976564.0,
+  "paying_accounts": 135,
+  "growth_first_to_last": 6042.8,
+  "churn_months": 17,
+  "retention_m6": 92.0,
+  "tests": 43
+}

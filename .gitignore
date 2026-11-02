@@ -1,0 +1,13 @@
+target/
+dbt_packages/
+logs/
+data/warehouse/*.duckdb
+data/warehouse/*.duckdb.wal
+*.duckdb
+*.duckdb.wal
+__pycache__/
+.venv/
+.DS_Store
+
+# dbt writes this per user
+.user.yml

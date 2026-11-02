@@ -1,0 +1,181 @@
+account_id,account_name,country,industry,segment,created_at
+ACC-0001,Nova Retail 1,United Kingdom,SaaS,smb,03/05/2026
+ACC-0002,Orbit SaaS 2,India,SaaS,enterprise,19/01/2026
+ACC-0003,Nova Fintech 3,Singapore,Education,smb,2026-06-03
+ACC-0004,Nova Fintech 4,India,Logistics,smb,2025-12-12
+ACC-0005,Kite SaaS 5,United Kingdom,Retail,smb,28/03/2025
+ACC-0006,Arbor Fintech 6,India,SaaS,smb,2026-06-08
+ACC-0007,Orbit Education 7,United Kingdom,Healthcare,mid,2025-05-30
+ACC-0008,Lumen Retail 8,India,Fintech,smb,08/02/2026
+ACC-0009,Kite Healthcare 9,India,Education,enterprise,2025-09-04
+ACC-0010,Nova Logistics 10,United States,Fintech,mid,2025-01-14
+ACC-0011,Orbit SaaS 11,Singapore,SaaS,mid,2026-03-16
+ACC-0012,Kite Healthcare 12,United Kingdom,Healthcare,smb,2025-10-25
+ACC-0013,Orbit Education 13,Singapore,SaaS,smb,2025-08-04
+ACC-0014,Arbor Logistics 14,Singapore,Healthcare,mid,2025-09-14
+ACC-0015,Nova Healthcare 15,India,Fintech,smb,2025-10-22
+ACC-0016,Lumen Fintech 16,Singapore,Fintech,enterprise,2025-06-12
+ACC-0017,Nova Fintech 17,United States,Healthcare,mid,2026-03-24
+ACC-0018,Kite Retail 18,Singapore,Healthcare,mid,2026-01-15
+ACC-0019,Vertex Fintech 19,India,Fintech,smb,2025-11-25
+ACC-0020,Nova Healthcare 20,UAE,Logistics,smb,2025-06-27
+ACC-0021,Vertex Healthcare 21,United Kingdom,Retail,mid,2024-11-05
+ACC-0022,Kite Education 22,Singapore,Education,smb,2026-04-12
+ACC-0023,Orbit Healthcare 23,United States,Healthcare,smb,2026-05-27
+ACC-0024,Nova Fintech 24,India,Fintech,enterprise,2025-12-16
+ACC-0025,Kite SaaS 25,India,SaaS,smb,2025-10-15
+ACC-0026,Kite SaaS 26,India,Fintech,enterprise,08/11/2025
+ACC-0027,Lumen Logistics 27,India,Healthcare,smb,17/07/2025
+ACC-0028,Orbit Healthcare 28,United States,Retail,smb,15/03/2026
+ACC-0029,Arbor Retail 29,United States,Education,smb,2025-10-17
+ACC-0030,Kite Retail 30,India,Education,smb,2025-05-30
+ACC-0031,Arbor SaaS 31,Singapore,Retail,mid,2025-09-02
+ACC-0032,Vertex Logistics 32,United Kingdom,Logistics,mid,2025-10-31
+ACC-0033,Vertex Healthcare 33,Singapore,Fintech,smb,2025-05-19
+ACC-0034,Arbor SaaS 34,India,Retail,enterprise,2025-10-31
+ACC-0035,Orbit Education 35,India,Retail,smb,2025-10-19
+ACC-0036,Orbit Fintech 36,India,Fintech,enterprise,2025-06-21
+ACC-0037,Orbit Education 37,India,Education,smb,2024-11-02
+ACC-0038,Orbit Education 38,UAE,Fintech,enterprise,2025-03-03
+ACC-0039,Arbor Retail 39,India,Education,enterprise,2026-01-19
+ACC-0040,Arbor Fintech 40,India,Fintech,smb,2025-01-26
+ACC-0041,Arbor Fintech 41,United Kingdom,Logistics,enterprise,2026-02-20
+ACC-0042,Vertex Logistics 42,United Kingdom,Fintech,smb,25/10/2025
+ACC-0043,Kite Education 43,India,Healthcare,smb,2025-02-14
+ACC-0044,Nova Retail 44,India,Retail,smb,2025-06-05
+ACC-0045,Lumen Logistics 45,United States,Fintech,smb,2025-09-30
+ACC-0046,Orbit Education 46,United Kingdom,Logistics,enterprise,2025-10-29
+ACC-0047,Vertex Logistics 47,India,Logistics,smb,2026-03-29
+ACC-0048,Kite SaaS 48,UAE,Fintech,smb,07/05/2025
+ACC-0049,Kite SaaS 49,India,Education,enterprise,2025-03-04
+ACC-0050,Kite SaaS 50,India,Fintech,mid,17/02/2025
+ACC-0051,Kite Healthcare 51,United Kingdom,SaaS,smb,2025-02-09
+ACC-0052,Kite Logistics 52,India,Education,mid,2026-04-02
+ACC-0053,Orbit Logistics 53,India,Education,mid,2026-05-01
+ACC-0054,Orbit Fintech 54,United States,SaaS,enterprise,2025-05-27
+ACC-0055,Arbor Fintech 55,United States,SaaS,smb,2025-01-14
+ACC-0056,Vertex Education 56,Singapore,Education,mid,06/03/2025
+ACC-0057,Orbit Fintech 57,Singapore,SaaS,enterprise,2025-03-21
+ACC-0058,Arbor Fintech 58,India,Education,enterprise,2025-04-16
+ACC-0059,Lumen Healthcare 59,India,Retail,mid,19/12/2025
+ACC-0060,Nova Retail 60,United Kingdom,Healthcare,enterprise,2025-11-10
+ACC-0061,Lumen Logistics 61,United Kingdom,Retail,smb,29/11/2025
+ACC-0062,Nova SaaS 62,India,Retail,smb,2025-06-23
+ACC-0063,Lumen Fintech 63,UAE,Healthcare,mid,2025-05-05
+ACC-0064,Kite Logistics 64,United States,Education,mid,04/05/2026
+ACC-0065,Arbor Fintech 65,United States,SaaS,mid,2024-12-29
+ACC-0066,Lumen SaaS 66,United Kingdom,Fintech,smb,2025-01-30
+ACC-0067,Orbit SaaS 67,India,Logistics,enterprise,2025-03-05
+ACC-0068,Kite Fintech 68,India,Logistics,smb,2025-08-02
+ACC-0069,Lumen SaaS 69,India,Fintech,mid,2025-04-15
+ACC-0070,Vertex Retail 70,United States,Logistics,smb,2026-04-28
+ACC-0071,Lumen SaaS 71,India,SaaS,smb,2024-11-19
+ACC-0072,Orbit SaaS 72,Singapore,Education,enterprise,2025-07-10
+ACC-0073,Orbit Logistics 73,India,Education,smb,2026-05-14
+ACC-0074,Vertex Education 74,Singapore,Education,smb,2025-10-17
+ACC-0075,Nova Fintech 75,India,SaaS,mid,2025-10-22
+ACC-0076,Nova Education 76,UAE,Healthcare,mid,2024-12-27
+ACC-0077,Nova Healthcare 77,India,Fintech,mid,2025-08-28
+ACC-0078,Lumen Retail 78,United Kingdom,Retail,smb,28/07/2025
+ACC-0079,Vertex Retail 79,India,SaaS,mid,2025-09-13
+ACC-0080,Lumen Logistics 80,Singapore,Fintech,smb,2026-03-02
+ACC-0081,Nova Retail 81,UAE,SaaS,smb,2024-11-06
+ACC-0082,Orbit SaaS 82,India,Retail,smb,13/12/2024
+ACC-0083,Vertex Education 83,Singapore,Logistics,enterprise,2026-04-26
+ACC-0084,Vertex Retail 84,Singapore,Logistics,smb,22/03/2026
+ACC-0085,Arbor Healthcare 85,Singapore,Education,smb,2026-04-10
+ACC-0086,Kite SaaS 86,UAE,Education,smb,01/04/2026
+ACC-0087,Vertex Education 87,India,SaaS,enterprise,2024-12-13
+ACC-0088,Nova Education 88,India,Education,smb,2026-05-26
+ACC-0089,Orbit SaaS 89,Singapore,Logistics,smb,2024-11-04
+ACC-0090,Arbor Education 90,United States,Retail,smb,2025-01-07
+ACC-0091,Arbor Fintech 91,India,Education,enterprise,2025-06-29
+ACC-0092,Nova Healthcare 92,Singapore,Retail,smb,2025-11-27
+ACC-0093,Nova Logistics 93,India,Retail,mid,2025-05-23
+ACC-0094,Kite Logistics 94,India,SaaS,enterprise,08/09/2025
+ACC-0095,Arbor SaaS 95,Singapore,Fintech,enterprise,2025-08-03
+ACC-0096,Lumen Healthcare 96,United States,Healthcare,smb,2026-04-13
+ACC-0097,Vertex Retail 97,India,Healthcare,smb,2026-05-17
+ACC-0098,Kite Healthcare 98,India,Healthcare,smb,2025-01-18
+ACC-0099,Nova Logistics 99,India,Fintech,mid,2025-06-04
+ACC-0100,Kite Education 100,United Kingdom,Retail,smb,2025-03-16
+ACC-0101,Orbit Healthcare 101,United States,SaaS,smb,25/06/2025
+ACC-0102,Arbor Healthcare 102,United States,Retail,smb,2026-03-19
+ACC-0103,Lumen SaaS 103,UAE,Retail,smb,2025-11-21
+ACC-0104,Orbit SaaS 104,India,Education,smb,2025-10-13
+ACC-0105,Lumen Retail 105,India,Healthcare,enterprise,2025-08-24
+ACC-0106,Lumen Healthcare 106,UAE,Retail,smb,2025-01-18
+ACC-0107,Arbor Retail 107,Singapore,Fintech,smb,2024-12-23
+ACC-0108,Kite Retail 108,India,Retail,enterprise,2026-01-21
+ACC-0109,Kite Logistics 109,India,Education,smb,15/12/2025
+ACC-0110,Orbit Logistics 110,UAE,Fintech,mid,2025-12-26
+ACC-0111,Vertex Fintech 111,United States,Healthcare,mid,2026-05-18
+ACC-0112,Arbor Education 112,Singapore,Retail,enterprise,2025-07-20
+ACC-0113,Orbit Logistics 113,Singapore,Healthcare,smb,2025-09-05
+ACC-0114,Nova Fintech 114,United Kingdom,Healthcare,smb,2025-04-15
+ACC-0115,Orbit Healthcare 115,India,Logistics,smb,2025-10-07
+ACC-0116,Lumen Logistics 116,India,Retail,smb,2025-04-28
+ACC-0117,Vertex SaaS 117,Singapore,Healthcare,enterprise,2026-06-07
+ACC-0118,Vertex Healthcare 118,India,Retail,smb,2026-04-21
+ACC-0119,Lumen Fintech 119,Singapore,Logistics,smb,12/06/2026
+ACC-0120,Orbit Healthcare 120,Singapore,Healthcare,enterprise,2025-07-13
+ACC-0121,Vertex SaaS 121,United States,Education,enterprise,2024-11-23
+ACC-0122,Nova SaaS 122,United States,Logistics,enterprise,2026-03-17
+ACC-0123,Nova Fintech 123,India,Fintech,smb,2025-07-13
+ACC-0124,Nova Logistics 124,UAE,SaaS,smb,2026-02-12
+ACC-0125,Kite SaaS 125,Singapore,Education,mid,2025-06-27
+ACC-0126,Kite Education 126,United States,Education,smb,16/07/2025
+ACC-0127,Kite Logistics 127,India,Healthcare,mid,2025-09-04
+ACC-0128,Nova Logistics 128,India,Healthcare,mid,2024-11-02
+ACC-0129,Orbit Logistics 129,India,Logistics,smb,07/07/2025
+ACC-0130,Arbor Education 130,India,SaaS,smb,2025-12-27
+ACC-0131,Nova Retail 131,India,Education,enterprise,2026-01-05
+ACC-0132,Orbit SaaS 132,Singapore,Retail,enterprise,2025-06-21
+ACC-0133,Vertex SaaS 133,UAE,Retail,smb,2025-12-11
+ACC-0134,Lumen Fintech 134,India,Healthcare,smb,2025-05-25
+ACC-0135,Nova Logistics 135,United States,Logistics,smb,2025-08-30
+ACC-0136,Orbit Education 136,India,Logistics,smb,2026-03-12
+ACC-0137,Vertex SaaS 137,United Kingdom,Fintech,enterprise,26/12/2024
+ACC-0138,Vertex Healthcare 138,United States,Education,mid,2025-01-01
+ACC-0139,Vertex Retail 139,India,Fintech,enterprise,21/01/2025
+ACC-0140,Lumen Retail 140,United States,Fintech,smb,23/11/2025
+ACC-0141,Nova Retail 141,United States,SaaS,smb,2025-08-14
+ACC-0142,Orbit SaaS 142,India,Education,enterprise,2025-09-13
+ACC-0143,Orbit Fintech 143,India,Retail,enterprise,09/05/2026
+ACC-0144,Vertex Education 144,UAE,Healthcare,smb,2025-12-26
+ACC-0145,Nova SaaS 145,India,Fintech,smb,2026-02-19
+ACC-0146,Lumen Retail 146,India,Logistics,smb,2025-10-14
+ACC-0147,Lumen Retail 147,India,Education,smb,21/09/2025
+ACC-0148,Nova Healthcare 148,Singapore,Healthcare,enterprise,2025-06-28
+ACC-0149,Orbit Fintech 149,United States,Fintech,smb,2026-01-15
+ACC-0150,Arbor Fintech 150,United Kingdom,Fintech,mid,2025-09-07
+ACC-0151,Lumen Logistics 151,India,Logistics,smb,2026-02-15
+ACC-0152,Vertex Healthcare 152,India,Education,smb,2025-04-13
+ACC-0153,Lumen Fintech 153,United States,SaaS,smb,2026-05-12
+ACC-0154,Vertex SaaS 154,United States,Healthcare,enterprise,2025-01-26
+ACC-0155,Orbit Healthcare 155,United Kingdom,Education,smb,2025-03-17
+ACC-0156,Lumen Retail 156,India,Logistics,mid,2025-03-05
+ACC-0157,Vertex Healthcare 157,India,Fintech,smb,2025-07-25
+ACC-0158,Kite Fintech 158,India,SaaS,enterprise,2025-08-16
+ACC-0159,Kite Logistics 159,India,Education,smb,2025-07-10
+ACC-0160,Nova SaaS 160,United States,Fintech,enterprise,2024-12-08
+ACC-0161,Lumen Fintech 161,India,SaaS,smb,2024-12-12
+ACC-0162,Vertex SaaS 162,India,Logistics,smb,2026-06-21
+ACC-0163,Arbor SaaS 163,India,Education,mid,2025-07-25
+ACC-0164,Lumen Fintech 164,India,Fintech,mid,13/11/2025
+ACC-0165,Nova Retail 165,United States,Education,mid,2025-05-28
+ACC-0166,Nova Fintech 166,India,Healthcare,enterprise,16/09/2025
+ACC-0167,Orbit Education 167,United Kingdom,Fintech,smb,2025-02-12
+ACC-0168,Arbor Retail 168,United States,Retail,mid,2025-12-13
+ACC-0169,Lumen Education 169,United Kingdom,Retail,enterprise,2024-12-23
+ACC-0170,Arbor Fintech 170,United States,Education,enterprise,2025-11-08
+ACC-0171,Orbit Fintech 171,United States,SaaS,smb,2024-11-07
+ACC-0172,Orbit Fintech 172,India,SaaS,smb,2025-11-09
+ACC-0173,Nova Logistics 173,United Kingdom,Retail,smb,12/12/2025
+ACC-0174,Vertex Logistics 174,India,SaaS,smb,2025-08-18
+ACC-0175,Lumen Fintech 175,UAE,SaaS,enterprise,2025-05-22
+ACC-0176,Nova Education 176,United Kingdom,Education,smb,2025-12-03
+ACC-0177,Kite Healthcare 177,United Kingdom,Fintech,enterprise,2025-06-16
+ACC-0178,Nova Healthcare 178,United Kingdom,Fintech,enterprise,2025-06-12
+ACC-0179,Vertex Education 179,UAE,Fintech,smb,2025-04-03
+ACC-0180,Arbor Retail 180,India,Healthcare,enterprise,2024-12-10

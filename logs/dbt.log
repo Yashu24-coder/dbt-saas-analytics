@@ -1,0 +1,2764 @@
+[0m04:18:39.168133 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eb42fcc62a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eb430449e20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eb430f904a0>]}
+
+
+============================== 04:18:39.200182 | 7ba9946d-b7b1-469f-a6a6-17ecc817a70c ==============================
+[0m04:18:39.200182 [info ] [MainThread]: Running with dbt=1.12.6
+[0m04:18:39.201929 [debug] [MainThread]: running dbt with arguments {'quiet': 'False', 'use_colors': 'True', 'debug': 'False', 'invocation_command': 'dbt build --profiles-dir .', 'log_format': 'default', 'log_cache_events': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'warn_error': 'None', 'no_print': 'None', 'hints_enabled': 'True', 'printer_width': '80', 'target_path': 'None', 'indirect_selection': 'eager', 'version_check': 'True', 'introspect': 'True', 'cache_selected_only': 'False', 'write_json': 'True', 'empty': 'False', 'use_experimental_parser': 'False', 'partial_parse': 'True', 'fail_fast': 'False', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'profiles_dir': '.', 'log_path': '/scratch/work/dbt-saas-analytics/logs', 'maximum_seed_size_mib': '1'}
+[0m04:18:40.218037 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7ba9946d-b7b1-469f-a6a6-17ecc817a70c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eb42a6ebb90>]}
+[0m04:18:40.540493 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7ba9946d-b7b1-469f-a6a6-17ecc817a70c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eb429c1ab70>]}
+[0m04:18:40.553865 [info ] [MainThread]: Registered adapter: duckdb=1.11.1
+[0m04:18:42.103274 [debug] [MainThread]: checksum: a85ee5a4fbbc976867353e115f24a43ba62dfe32cabec1bfa2d692ce6cf63f2c, vars: {}, profile: saas_analytics, target: dev, version: 1.12.6
+[0m04:18:42.106225 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m04:18:42.107127 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '7ba9946d-b7b1-469f-a6a6-17ecc817a70c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eb429b6d280>]}
+[0m04:18:49.051033 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7ba9946d-b7b1-469f-a6a6-17ecc817a70c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eb429391820>]}
+[0m04:18:49.844217 [debug] [MainThread]: Wrote artifact WritableManifest to /scratch/work/dbt-saas-analytics/target/manifest.json
+[0m04:18:49.857169 [debug] [MainThread]: Wrote artifact SemanticManifest to /scratch/work/dbt-saas-analytics/target/semantic_manifest.json
+[0m04:18:50.003156 [debug] [MainThread]: Wrote artifact OsiDocument to /scratch/work/dbt-saas-analytics/target/osi_document.json
+[0m04:18:50.104484 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7ba9946d-b7b1-469f-a6a6-17ecc817a70c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eb429376e40>]}
+[0m04:18:50.105840 [info ] [MainThread]: Found 13 models, 1 snapshot, 27 data tests, 5 sources, 2 exposures, 515 macros
+[0m04:18:50.115886 [info ] [MainThread]: 
+[0m04:18:50.117231 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m04:18:50.118457 [info ] [MainThread]: 
+[0m04:18:50.119821 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m04:18:50.137340 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_saas'
+[0m04:18:50.511744 [debug] [ThreadPool]: Using duckdb connection "list_saas"
+[0m04:18:50.513241 [debug] [ThreadPool]: On list_saas: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "connection_name": "list_saas"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"saas"'
+    
+  
+  
+[0m04:18:50.514370 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m04:18:50.921389 [debug] [ThreadPool]: SQL status: OK in 0.407 seconds
+[0m04:18:50.925427 [debug] [ThreadPool]: On list_saas: Close
+[0m04:18:50.930308 [debug] [ThreadPool]: Using duckdb connection "list_saas"
+[0m04:18:50.931535 [debug] [ThreadPool]: On list_saas: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "connection_name": "list_saas"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"saas"'
+    
+  
+  
+[0m04:18:50.932462 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m04:18:50.943238 [debug] [ThreadPool]: SQL status: OK in 0.011 seconds
+[0m04:18:50.946638 [debug] [ThreadPool]: On list_saas: Close
+[0m04:18:50.954669 [debug] [ThreadPool]: Using duckdb connection "list_saas"
+[0m04:18:50.956187 [debug] [ThreadPool]: On list_saas: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "connection_name": "list_saas"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"saas"'
+    
+  
+  
+[0m04:18:50.957869 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m04:18:50.967949 [debug] [ThreadPool]: SQL status: OK in 0.010 seconds
+[0m04:18:50.973766 [debug] [ThreadPool]: On list_saas: Close
+[0m04:18:50.978437 [debug] [ThreadPool]: Using duckdb connection "list_saas"
+[0m04:18:50.980469 [debug] [ThreadPool]: On list_saas: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "connection_name": "list_saas"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"saas"'
+    
+  
+  
+[0m04:18:50.981600 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m04:18:50.985126 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m04:18:50.988355 [debug] [ThreadPool]: On list_saas: Close
+[0m04:18:50.992152 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_saas, now create_saas_intermediate)
+[0m04:18:50.995439 [debug] [ThreadPool]: Creating schema "database: "saas"
+schema: "intermediate"
+"
+[0m04:18:51.025718 [debug] [ThreadPool]: Using duckdb connection "create_saas_intermediate"
+[0m04:18:51.026564 [debug] [ThreadPool]: On create_saas_intermediate: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "connection_name": "create_saas_intermediate"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='saas'
+        and type != 'duckdb'
+    
+  
+[0m04:18:51.027294 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m04:18:51.029721 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m04:18:51.032173 [debug] [ThreadPool]: Using duckdb connection "create_saas_intermediate"
+[0m04:18:51.032806 [debug] [ThreadPool]: On create_saas_intermediate: BEGIN
+[0m04:18:51.033941 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m04:18:51.034592 [debug] [ThreadPool]: Using duckdb connection "create_saas_intermediate"
+[0m04:18:51.035288 [debug] [ThreadPool]: On create_saas_intermediate: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "connection_name": "create_saas_intermediate"} */
+
+    
+    
+        create schema if not exists "saas"."intermediate"
+    
+[0m04:18:51.037810 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m04:18:51.040101 [debug] [ThreadPool]: On create_saas_intermediate: COMMIT
+[0m04:18:51.040944 [debug] [ThreadPool]: Using duckdb connection "create_saas_intermediate"
+[0m04:18:51.041775 [debug] [ThreadPool]: On create_saas_intermediate: COMMIT
+[0m04:18:51.046786 [debug] [ThreadPool]: SQL status: OK in 0.004 seconds
+[0m04:18:51.047945 [debug] [ThreadPool]: On create_saas_intermediate: Close
+[0m04:18:51.049982 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_saas_intermediate, now create_saas_staging)
+[0m04:18:51.052010 [debug] [ThreadPool]: Creating schema "database: "saas"
+schema: "staging"
+"
+[0m04:18:51.055878 [debug] [ThreadPool]: Using duckdb connection "create_saas_staging"
+[0m04:18:51.056987 [debug] [ThreadPool]: On create_saas_staging: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "connection_name": "create_saas_staging"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='saas'
+        and type != 'duckdb'
+    
+  
+[0m04:18:51.058678 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m04:18:51.062967 [debug] [ThreadPool]: SQL status: OK in 0.004 seconds
+[0m04:18:51.067161 [debug] [ThreadPool]: Using duckdb connection "create_saas_staging"
+[0m04:18:51.067869 [debug] [ThreadPool]: On create_saas_staging: BEGIN
+[0m04:18:51.069575 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m04:18:51.070293 [debug] [ThreadPool]: Using duckdb connection "create_saas_staging"
+[0m04:18:51.070969 [debug] [ThreadPool]: On create_saas_staging: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "connection_name": "create_saas_staging"} */
+
+    
+    
+        create schema if not exists "saas"."staging"
+    
+[0m04:18:51.072170 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m04:18:51.073982 [debug] [ThreadPool]: On create_saas_staging: COMMIT
+[0m04:18:51.074765 [debug] [ThreadPool]: Using duckdb connection "create_saas_staging"
+[0m04:18:51.075442 [debug] [ThreadPool]: On create_saas_staging: COMMIT
+[0m04:18:51.079439 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m04:18:51.080366 [debug] [ThreadPool]: On create_saas_staging: Close
+[0m04:18:51.082330 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_saas_staging, now create_saas_snapshots)
+[0m04:18:51.083645 [debug] [ThreadPool]: Creating schema "database: "saas"
+schema: "snapshots"
+"
+[0m04:18:51.088317 [debug] [ThreadPool]: Using duckdb connection "create_saas_snapshots"
+[0m04:18:51.089300 [debug] [ThreadPool]: On create_saas_snapshots: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "connection_name": "create_saas_snapshots"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='saas'
+        and type != 'duckdb'
+    
+  
+[0m04:18:51.090075 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m04:18:51.092471 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m04:18:51.095086 [debug] [ThreadPool]: Using duckdb connection "create_saas_snapshots"
+[0m04:18:51.095772 [debug] [ThreadPool]: On create_saas_snapshots: BEGIN
+[0m04:18:51.099300 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m04:18:51.100338 [debug] [ThreadPool]: Using duckdb connection "create_saas_snapshots"
+[0m04:18:51.101560 [debug] [ThreadPool]: On create_saas_snapshots: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "connection_name": "create_saas_snapshots"} */
+
+    
+    
+        create schema if not exists "saas"."snapshots"
+    
+[0m04:18:51.103984 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m04:18:51.109699 [debug] [ThreadPool]: On create_saas_snapshots: COMMIT
+[0m04:18:51.110712 [debug] [ThreadPool]: Using duckdb connection "create_saas_snapshots"
+[0m04:18:51.111331 [debug] [ThreadPool]: On create_saas_snapshots: COMMIT
+[0m04:18:51.116141 [debug] [ThreadPool]: SQL status: OK in 0.004 seconds
+[0m04:18:51.117373 [debug] [ThreadPool]: On create_saas_snapshots: Close
+[0m04:18:51.119311 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_saas_snapshots, now create_saas_marts)
+[0m04:18:51.120628 [debug] [ThreadPool]: Creating schema "database: "saas"
+schema: "marts"
+"
+[0m04:18:51.123634 [debug] [ThreadPool]: Using duckdb connection "create_saas_marts"
+[0m04:18:51.124631 [debug] [ThreadPool]: On create_saas_marts: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "connection_name": "create_saas_marts"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='saas'
+        and type != 'duckdb'
+    
+  
+[0m04:18:51.125381 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m04:18:51.130362 [debug] [ThreadPool]: SQL status: OK in 0.005 seconds
+[0m04:18:51.134283 [debug] [ThreadPool]: Using duckdb connection "create_saas_marts"
+[0m04:18:51.135375 [debug] [ThreadPool]: On create_saas_marts: BEGIN
+[0m04:18:51.137072 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m04:18:51.138649 [debug] [ThreadPool]: Using duckdb connection "create_saas_marts"
+[0m04:18:51.139853 [debug] [ThreadPool]: On create_saas_marts: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "connection_name": "create_saas_marts"} */
+
+    
+    
+        create schema if not exists "saas"."marts"
+    
+[0m04:18:51.142388 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m04:18:51.145111 [debug] [ThreadPool]: On create_saas_marts: COMMIT
+[0m04:18:51.146002 [debug] [ThreadPool]: Using duckdb connection "create_saas_marts"
+[0m04:18:51.146799 [debug] [ThreadPool]: On create_saas_marts: COMMIT
+[0m04:18:51.151086 [debug] [ThreadPool]: SQL status: OK in 0.004 seconds
+[0m04:18:51.152305 [debug] [ThreadPool]: On create_saas_marts: Close
+[0m04:18:51.157786 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_saas_marts, now list_saas_intermediate)
+[0m04:18:51.168272 [debug] [ThreadPool]: Using duckdb connection "list_saas_intermediate"
+[0m04:18:51.169086 [debug] [ThreadPool]: On list_saas_intermediate: BEGIN
+[0m04:18:51.169792 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m04:18:51.171313 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m04:18:51.171852 [debug] [ThreadPool]: Using duckdb connection "list_saas_intermediate"
+[0m04:18:51.172478 [debug] [ThreadPool]: On list_saas_intermediate: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "connection_name": "list_saas_intermediate"} */
+select
+      'saas' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'intermediate'
+    and lower(table_catalog) = 'saas'
+  
+[0m04:18:51.198973 [debug] [ThreadPool]: SQL status: OK in 0.026 seconds
+[0m04:18:51.201555 [debug] [ThreadPool]: On list_saas_intermediate: ROLLBACK
+[0m04:18:51.202794 [debug] [ThreadPool]: On list_saas_intermediate: Close
+[0m04:18:51.204091 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_saas_intermediate, now list_saas_staging)
+[0m04:18:51.206904 [debug] [ThreadPool]: Using duckdb connection "list_saas_staging"
+[0m04:18:51.207816 [debug] [ThreadPool]: On list_saas_staging: BEGIN
+[0m04:18:51.208664 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m04:18:51.210199 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m04:18:51.210836 [debug] [ThreadPool]: Using duckdb connection "list_saas_staging"
+[0m04:18:51.211488 [debug] [ThreadPool]: On list_saas_staging: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "connection_name": "list_saas_staging"} */
+select
+      'saas' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'staging'
+    and lower(table_catalog) = 'saas'
+  
+[0m04:18:51.217178 [debug] [ThreadPool]: SQL status: OK in 0.005 seconds
+[0m04:18:51.220012 [debug] [ThreadPool]: On list_saas_staging: ROLLBACK
+[0m04:18:51.224560 [debug] [ThreadPool]: On list_saas_staging: Close
+[0m04:18:51.226532 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_saas_staging, now list_saas_snapshots)
+[0m04:18:51.229138 [debug] [ThreadPool]: Using duckdb connection "list_saas_snapshots"
+[0m04:18:51.229855 [debug] [ThreadPool]: On list_saas_snapshots: BEGIN
+[0m04:18:51.230703 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m04:18:51.232026 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m04:18:51.232805 [debug] [ThreadPool]: Using duckdb connection "list_saas_snapshots"
+[0m04:18:51.233566 [debug] [ThreadPool]: On list_saas_snapshots: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "connection_name": "list_saas_snapshots"} */
+select
+      'saas' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'snapshots'
+    and lower(table_catalog) = 'saas'
+  
+[0m04:18:51.238580 [debug] [ThreadPool]: SQL status: OK in 0.004 seconds
+[0m04:18:51.240954 [debug] [ThreadPool]: On list_saas_snapshots: ROLLBACK
+[0m04:18:51.241992 [debug] [ThreadPool]: On list_saas_snapshots: Close
+[0m04:18:51.243117 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_saas_snapshots, now list_saas_marts)
+[0m04:18:51.245135 [debug] [ThreadPool]: Using duckdb connection "list_saas_marts"
+[0m04:18:51.245814 [debug] [ThreadPool]: On list_saas_marts: BEGIN
+[0m04:18:51.246382 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m04:18:51.247503 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m04:18:51.248094 [debug] [ThreadPool]: Using duckdb connection "list_saas_marts"
+[0m04:18:51.248724 [debug] [ThreadPool]: On list_saas_marts: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "connection_name": "list_saas_marts"} */
+select
+      'saas' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'marts'
+    and lower(table_catalog) = 'saas'
+  
+[0m04:18:51.253474 [debug] [ThreadPool]: SQL status: OK in 0.004 seconds
+[0m04:18:51.255897 [debug] [ThreadPool]: On list_saas_marts: ROLLBACK
+[0m04:18:51.257098 [debug] [ThreadPool]: On list_saas_marts: Close
+[0m04:18:51.259281 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7ba9946d-b7b1-469f-a6a6-17ecc817a70c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eb4284af470>]}
+[0m04:18:51.260879 [debug] [MainThread]: Using duckdb connection "master"
+[0m04:18:51.261697 [debug] [MainThread]: On master: BEGIN
+[0m04:18:51.262411 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m04:18:51.265020 [debug] [MainThread]: SQL status: OK in 0.003 seconds
+[0m04:18:51.266335 [debug] [MainThread]: On master: COMMIT
+[0m04:18:51.267290 [debug] [MainThread]: Using duckdb connection "master"
+[0m04:18:51.268078 [debug] [MainThread]: On master: COMMIT
+[0m04:18:51.269787 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m04:18:51.270749 [debug] [MainThread]: On master: Close
+[0m04:18:51.299740 [debug] [Thread-1 (]: Began running node model.saas_analytics.stg_accounts
+[0m04:18:51.300860 [info ] [Thread-1 (]: 1 of 43 START sql view model staging.stg_accounts .............................. [RUN]
+[0m04:18:51.301922 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_saas_marts, now model.saas_analytics.stg_accounts)
+[0m04:18:51.302661 [debug] [Thread-1 (]: Began compiling node model.saas_analytics.stg_accounts
+[0m04:18:51.316285 [debug] [Thread-1 (]: Writing injected SQL for node "model.saas_analytics.stg_accounts"
+[0m04:18:51.319036 [debug] [Thread-1 (]: Began executing node model.saas_analytics.stg_accounts
+[0m04:18:51.321145 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.stg_accounts"
+[0m04:18:51.321896 [debug] [Thread-1 (]: On model.saas_analytics.stg_accounts: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "model.saas_analytics.stg_accounts"} */
+select database_name, type from duckdb_databases()
+[0m04:18:51.322564 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m04:18:51.328268 [debug] [Thread-1 (]: SQL status: OK in 0.006 seconds
+[0m04:18:51.332085 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.stg_accounts"
+[0m04:18:51.333133 [debug] [Thread-1 (]: On model.saas_analytics.stg_accounts: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "model.saas_analytics.stg_accounts"} */
+
+                    select table_name, constraint_type from duckdb_constraints()
+                    where lower(database_name) = lower('saas')
+                      and lower(schema_name) = lower('staging')
+                      and constraint_type in ('PRIMARY KEY', 'UNIQUE', 'FOREIGN KEY')
+                    
+[0m04:18:51.336236 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m04:18:51.415804 [debug] [Thread-1 (]: Writing runtime sql for node "model.saas_analytics.stg_accounts"
+[0m04:18:51.419042 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.stg_accounts"
+[0m04:18:51.419901 [debug] [Thread-1 (]: On model.saas_analytics.stg_accounts: BEGIN
+[0m04:18:51.421110 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m04:18:51.421824 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.stg_accounts"
+[0m04:18:51.422649 [debug] [Thread-1 (]: On model.saas_analytics.stg_accounts: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "model.saas_analytics.stg_accounts"} */
+
+  
+  create view "saas"."staging"."stg_accounts__dbt_tmp" as (
+    -- Accounts with a parsed created_at and a normalised country label.
+
+with source as (
+
+    select * from read_csv_auto('data/raw/accounts.csv', all_varchar = true)
+
+),
+
+renamed as (
+
+    select
+        trim(account_id)                        as account_id,
+        trim(account_name)                      as account_name,
+        case upper(trim(country))
+            when 'UAE' then 'United Arab Emirates'
+            when 'UNITED STATES' then 'United States'
+            when 'UNITED KINGDOM' then 'United Kingdom'
+            else upper(substr(trim(country), 1, 1)) || lower(substr(trim(country), 2))
+
+        end                                     as country,
+        upper(substr(trim(industry), 1, 1)) || lower(substr(trim(industry), 2))
+                 as industry,
+        lower(trim(segment))                    as segment,
+        coalesce(
+            try_strptime(trim(created_at), '%Y-%m-%d'),
+            try_strptime(trim(created_at), '%d/%m/%Y')
+        )::date                                 as created_at
+    from source
+    where account_id is not null
+
+),
+
+deduplicated as (
+
+    select *
+    from renamed
+    qualify row_number() over (partition by account_id order by created_at) = 1
+
+)
+
+select * from deduplicated
+  );
+
+[0m04:18:51.539366 [debug] [Thread-1 (]: SQL status: OK in 0.116 seconds
+[0m04:18:51.549861 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.stg_accounts"
+[0m04:18:51.550941 [debug] [Thread-1 (]: On model.saas_analytics.stg_accounts: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "model.saas_analytics.stg_accounts"} */
+alter view "saas"."staging"."stg_accounts__dbt_tmp" rename to "stg_accounts"
+[0m04:18:51.553589 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m04:18:51.578846 [debug] [Thread-1 (]: On model.saas_analytics.stg_accounts: COMMIT
+[0m04:18:51.580122 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.stg_accounts"
+[0m04:18:51.581118 [debug] [Thread-1 (]: On model.saas_analytics.stg_accounts: COMMIT
+[0m04:18:51.597490 [debug] [Thread-1 (]: SQL status: OK in 0.015 seconds
+[0m04:18:51.608097 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.stg_accounts"
+[0m04:18:51.609264 [debug] [Thread-1 (]: On model.saas_analytics.stg_accounts: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "model.saas_analytics.stg_accounts"} */
+
+      drop view if exists "saas"."staging"."stg_accounts__dbt_backup" cascade
+    
+[0m04:18:51.612143 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:51.616949 [debug] [Thread-1 (]: On model.saas_analytics.stg_accounts: Close
+[0m04:18:51.620911 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7ba9946d-b7b1-469f-a6a6-17ecc817a70c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eb431cefcb0>]}
+[0m04:18:51.622197 [info ] [Thread-1 (]: 1 of 43 OK created sql view model staging.stg_accounts ......................... [[32mOK[0m in 0.32s]
+[0m04:18:51.623442 [debug] [Thread-1 (]: Finished running node model.saas_analytics.stg_accounts
+[0m04:18:51.624318 [debug] [Thread-1 (]: Began running node model.saas_analytics.stg_invoices
+[0m04:18:51.625317 [info ] [Thread-1 (]: 2 of 43 START sql view model staging.stg_invoices .............................. [RUN]
+[0m04:18:51.626366 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.saas_analytics.stg_accounts, now model.saas_analytics.stg_invoices)
+[0m04:18:51.627362 [debug] [Thread-1 (]: Began compiling node model.saas_analytics.stg_invoices
+[0m04:18:51.632144 [debug] [Thread-1 (]: Writing injected SQL for node "model.saas_analytics.stg_invoices"
+[0m04:18:51.634030 [debug] [Thread-1 (]: Began executing node model.saas_analytics.stg_invoices
+[0m04:18:51.639133 [debug] [Thread-1 (]: Writing runtime sql for node "model.saas_analytics.stg_invoices"
+[0m04:18:51.641210 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.stg_invoices"
+[0m04:18:51.642084 [debug] [Thread-1 (]: On model.saas_analytics.stg_invoices: BEGIN
+[0m04:18:51.642820 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m04:18:51.644193 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:51.644961 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.stg_invoices"
+[0m04:18:51.645863 [debug] [Thread-1 (]: On model.saas_analytics.stg_invoices: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "model.saas_analytics.stg_invoices"} */
+
+  
+  create view "saas"."staging"."stg_invoices__dbt_tmp" as (
+    -- Invoices, with the duplicate rows from the re-run billing job collapsed.
+-- Void credit notes are kept but flagged, so they never count as revenue.
+
+with source as (
+
+    select * from read_csv_auto('data/raw/invoices.csv', all_varchar = true)
+
+),
+
+renamed as (
+
+    select
+        trim(invoice_id)                        as invoice_id,
+        trim(account_id)                        as account_id,
+        trim(subscription_id)                   as subscription_id,
+        coalesce(
+            try_strptime(trim(invoice_date), '%Y-%m-%d'),
+            try_strptime(trim(invoice_date), '%d/%m/%Y')
+        )::date                                 as invoice_date,
+        cast(
+            replace(replace(trim(amount_cents), '.', ''), ',', '.') as double
+        )                                       as amount_cents,
+        upper(trim(currency))                   as currency,
+        lower(trim(status))                     as status
+    from source
+    where invoice_id is not null
+
+),
+
+deduplicated as (
+
+    select *
+    from renamed
+    qualify row_number() over (partition by invoice_id order by invoice_date) = 1
+
+)
+
+select
+    *,
+    amount_cents < 0                                as is_credit_note,
+    
+    round((amount_cents) / 100.0, 2)
+          as amount_usd
+from deduplicated
+  );
+
+[0m04:18:51.675771 [debug] [Thread-1 (]: SQL status: OK in 0.029 seconds
+[0m04:18:51.681156 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.stg_invoices"
+[0m04:18:51.682147 [debug] [Thread-1 (]: On model.saas_analytics.stg_invoices: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "model.saas_analytics.stg_invoices"} */
+alter view "saas"."staging"."stg_invoices__dbt_tmp" rename to "stg_invoices"
+[0m04:18:51.683834 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:51.687293 [debug] [Thread-1 (]: On model.saas_analytics.stg_invoices: COMMIT
+[0m04:18:51.688833 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.stg_invoices"
+[0m04:18:51.693726 [debug] [Thread-1 (]: On model.saas_analytics.stg_invoices: COMMIT
+[0m04:18:51.698000 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m04:18:51.701256 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.stg_invoices"
+[0m04:18:51.702151 [debug] [Thread-1 (]: On model.saas_analytics.stg_invoices: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "model.saas_analytics.stg_invoices"} */
+
+      drop view if exists "saas"."staging"."stg_invoices__dbt_backup" cascade
+    
+[0m04:18:51.703745 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:51.706482 [debug] [Thread-1 (]: On model.saas_analytics.stg_invoices: Close
+[0m04:18:51.707841 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7ba9946d-b7b1-469f-a6a6-17ecc817a70c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eb42830ed20>]}
+[0m04:18:51.709169 [info ] [Thread-1 (]: 2 of 43 OK created sql view model staging.stg_invoices ......................... [[32mOK[0m in 0.08s]
+[0m04:18:51.710454 [debug] [Thread-1 (]: Finished running node model.saas_analytics.stg_invoices
+[0m04:18:51.711344 [debug] [Thread-1 (]: Began running node model.saas_analytics.stg_payments
+[0m04:18:51.712348 [info ] [Thread-1 (]: 3 of 43 START sql view model staging.stg_payments .............................. [RUN]
+[0m04:18:51.713343 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.saas_analytics.stg_invoices, now model.saas_analytics.stg_payments)
+[0m04:18:51.713998 [debug] [Thread-1 (]: Began compiling node model.saas_analytics.stg_payments
+[0m04:18:51.717292 [debug] [Thread-1 (]: Writing injected SQL for node "model.saas_analytics.stg_payments"
+[0m04:18:51.718982 [debug] [Thread-1 (]: Began executing node model.saas_analytics.stg_payments
+[0m04:18:51.723685 [debug] [Thread-1 (]: Writing runtime sql for node "model.saas_analytics.stg_payments"
+[0m04:18:51.725345 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.stg_payments"
+[0m04:18:51.726057 [debug] [Thread-1 (]: On model.saas_analytics.stg_payments: BEGIN
+[0m04:18:51.726758 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m04:18:51.728271 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m04:18:51.728903 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.stg_payments"
+[0m04:18:51.729601 [debug] [Thread-1 (]: On model.saas_analytics.stg_payments: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "model.saas_analytics.stg_payments"} */
+
+  
+  create view "saas"."staging"."stg_payments__dbt_tmp" as (
+    -- Successful payments against invoices.
+
+with source as (
+
+    select * from read_csv_auto('data/raw/payments.csv', all_varchar = true)
+
+),
+
+renamed as (
+
+    select
+        trim(payment_id)                        as payment_id,
+        trim(invoice_id)                        as invoice_id,
+        coalesce(
+            try_strptime(trim(paid_at), '%Y-%m-%d'),
+            try_strptime(trim(paid_at), '%d/%m/%Y')
+        )::date                                 as paid_at,
+        cast(
+            replace(replace(trim(amount_cents), '.', ''), ',', '.') as double
+        )                                       as amount_cents,
+        lower(trim(method))                     as method
+    from source
+    where payment_id is not null
+
+)
+
+select * from renamed
+  );
+
+[0m04:18:51.751733 [debug] [Thread-1 (]: SQL status: OK in 0.021 seconds
+[0m04:18:51.756826 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.stg_payments"
+[0m04:18:51.757908 [debug] [Thread-1 (]: On model.saas_analytics.stg_payments: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "model.saas_analytics.stg_payments"} */
+alter view "saas"."staging"."stg_payments__dbt_tmp" rename to "stg_payments"
+[0m04:18:51.759913 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:51.762751 [debug] [Thread-1 (]: On model.saas_analytics.stg_payments: COMMIT
+[0m04:18:51.763822 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.stg_payments"
+[0m04:18:51.764700 [debug] [Thread-1 (]: On model.saas_analytics.stg_payments: COMMIT
+[0m04:18:51.770724 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m04:18:51.774291 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.stg_payments"
+[0m04:18:51.775157 [debug] [Thread-1 (]: On model.saas_analytics.stg_payments: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "model.saas_analytics.stg_payments"} */
+
+      drop view if exists "saas"."staging"."stg_payments__dbt_backup" cascade
+    
+[0m04:18:51.776607 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:51.779133 [debug] [Thread-1 (]: On model.saas_analytics.stg_payments: Close
+[0m04:18:51.780190 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7ba9946d-b7b1-469f-a6a6-17ecc817a70c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eb4283e25d0>]}
+[0m04:18:51.781343 [info ] [Thread-1 (]: 3 of 43 OK created sql view model staging.stg_payments ......................... [[32mOK[0m in 0.07s]
+[0m04:18:51.782671 [debug] [Thread-1 (]: Finished running node model.saas_analytics.stg_payments
+[0m04:18:51.783537 [debug] [Thread-1 (]: Began running node model.saas_analytics.stg_plans
+[0m04:18:51.784874 [info ] [Thread-1 (]: 4 of 43 START sql view model staging.stg_plans ................................. [RUN]
+[0m04:18:51.785904 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.saas_analytics.stg_payments, now model.saas_analytics.stg_plans)
+[0m04:18:51.786598 [debug] [Thread-1 (]: Began compiling node model.saas_analytics.stg_plans
+[0m04:18:51.790739 [debug] [Thread-1 (]: Writing injected SQL for node "model.saas_analytics.stg_plans"
+[0m04:18:51.794447 [debug] [Thread-1 (]: Began executing node model.saas_analytics.stg_plans
+[0m04:18:51.800440 [debug] [Thread-1 (]: Writing runtime sql for node "model.saas_analytics.stg_plans"
+[0m04:18:51.802465 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.stg_plans"
+[0m04:18:51.803227 [debug] [Thread-1 (]: On model.saas_analytics.stg_plans: BEGIN
+[0m04:18:51.803931 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m04:18:51.805225 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:51.806206 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.stg_plans"
+[0m04:18:51.807410 [debug] [Thread-1 (]: On model.saas_analytics.stg_plans: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "model.saas_analytics.stg_plans"} */
+
+  
+  create view "saas"."staging"."stg_plans__dbt_tmp" as (
+    -- Plan SKUs with a typed monthly price.
+
+with source as (
+
+    select * from read_csv_auto('data/raw/plans.csv', all_varchar = true)
+
+),
+
+renamed as (
+
+    select
+        plan_id,
+        upper(substr(trim(plan_name), 1, 1)) || lower(substr(trim(plan_name), 2))
+                 as plan_name,
+        cast(monthly_price_cents as integer)     as monthly_price_cents,
+        
+    round((cast(monthly_price_cents as integer)) / 100.0, 2)
+ as monthly_price_usd,
+        lower(trim(billing_interval))            as billing_interval
+    from source
+    where plan_id is not null
+
+)
+
+select * from renamed
+  );
+
+[0m04:18:51.819321 [debug] [Thread-1 (]: SQL status: OK in 0.011 seconds
+[0m04:18:51.823429 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.stg_plans"
+[0m04:18:51.824301 [debug] [Thread-1 (]: On model.saas_analytics.stg_plans: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "model.saas_analytics.stg_plans"} */
+alter view "saas"."staging"."stg_plans__dbt_tmp" rename to "stg_plans"
+[0m04:18:51.825950 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:51.828929 [debug] [Thread-1 (]: On model.saas_analytics.stg_plans: COMMIT
+[0m04:18:51.830115 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.stg_plans"
+[0m04:18:51.830976 [debug] [Thread-1 (]: On model.saas_analytics.stg_plans: COMMIT
+[0m04:18:51.835336 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m04:18:51.839528 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.stg_plans"
+[0m04:18:51.840604 [debug] [Thread-1 (]: On model.saas_analytics.stg_plans: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "model.saas_analytics.stg_plans"} */
+
+      drop view if exists "saas"."staging"."stg_plans__dbt_backup" cascade
+    
+[0m04:18:51.842904 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:51.845915 [debug] [Thread-1 (]: On model.saas_analytics.stg_plans: Close
+[0m04:18:51.848463 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7ba9946d-b7b1-469f-a6a6-17ecc817a70c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eb4283e2f60>]}
+[0m04:18:51.851663 [info ] [Thread-1 (]: 4 of 43 OK created sql view model staging.stg_plans ............................ [[32mOK[0m in 0.06s]
+[0m04:18:51.853314 [debug] [Thread-1 (]: Finished running node model.saas_analytics.stg_plans
+[0m04:18:51.854316 [debug] [Thread-1 (]: Began running node model.saas_analytics.stg_subscriptions
+[0m04:18:51.855434 [info ] [Thread-1 (]: 5 of 43 START sql view model staging.stg_subscriptions ......................... [RUN]
+[0m04:18:51.856865 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.saas_analytics.stg_plans, now model.saas_analytics.stg_subscriptions)
+[0m04:18:51.857742 [debug] [Thread-1 (]: Began compiling node model.saas_analytics.stg_subscriptions
+[0m04:18:51.862658 [debug] [Thread-1 (]: Writing injected SQL for node "model.saas_analytics.stg_subscriptions"
+[0m04:18:51.864925 [debug] [Thread-1 (]: Began executing node model.saas_analytics.stg_subscriptions
+[0m04:18:51.870000 [debug] [Thread-1 (]: Writing runtime sql for node "model.saas_analytics.stg_subscriptions"
+[0m04:18:51.871935 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.stg_subscriptions"
+[0m04:18:51.872705 [debug] [Thread-1 (]: On model.saas_analytics.stg_subscriptions: BEGIN
+[0m04:18:51.873349 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m04:18:51.874567 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:51.875356 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.stg_subscriptions"
+[0m04:18:51.876249 [debug] [Thread-1 (]: On model.saas_analytics.stg_subscriptions: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "model.saas_analytics.stg_subscriptions"} */
+
+  
+  create view "saas"."staging"."stg_subscriptions__dbt_tmp" as (
+    -- Subscription periods. An account that upgrades has two rows: the first ends
+-- on the upgrade date, the second starts on it.
+
+with source as (
+
+    select * from read_csv_auto('data/raw/subscriptions.csv', all_varchar = true)
+
+),
+
+renamed as (
+
+    select
+        trim(subscription_id)                   as subscription_id,
+        trim(account_id)                        as account_id,
+        trim(plan_id)                           as plan_id,
+        coalesce(
+            try_strptime(trim(started_at), '%Y-%m-%d'),
+            try_strptime(trim(started_at), '%d/%m/%Y')
+        )::date                                 as started_at,
+        coalesce(
+            try_strptime(nullif(trim(ended_at), ''), '%Y-%m-%d'),
+            try_strptime(nullif(trim(ended_at), ''), '%d/%m/%Y')
+        )::date                                 as ended_at,
+        lower(trim(status))                     as status,
+        cast(seats as integer)                  as seats
+    from source
+    where subscription_id is not null
+
+),
+
+cleaned as (
+
+    select
+        *,
+        coalesce(ended_at, date '2026-10-01') as active_until
+    from renamed
+    where started_at is not null
+      and cast(seats as integer) > 0
+
+)
+
+select * from cleaned
+  );
+
+[0m04:18:51.901277 [debug] [Thread-1 (]: SQL status: OK in 0.024 seconds
+[0m04:18:51.905557 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.stg_subscriptions"
+[0m04:18:51.906670 [debug] [Thread-1 (]: On model.saas_analytics.stg_subscriptions: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "model.saas_analytics.stg_subscriptions"} */
+alter view "saas"."staging"."stg_subscriptions__dbt_tmp" rename to "stg_subscriptions"
+[0m04:18:51.908705 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:51.912440 [debug] [Thread-1 (]: On model.saas_analytics.stg_subscriptions: COMMIT
+[0m04:18:51.913782 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.stg_subscriptions"
+[0m04:18:51.914724 [debug] [Thread-1 (]: On model.saas_analytics.stg_subscriptions: COMMIT
+[0m04:18:51.919341 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m04:18:51.923015 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.stg_subscriptions"
+[0m04:18:51.923739 [debug] [Thread-1 (]: On model.saas_analytics.stg_subscriptions: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "model.saas_analytics.stg_subscriptions"} */
+
+      drop view if exists "saas"."staging"."stg_subscriptions__dbt_backup" cascade
+    
+[0m04:18:51.925012 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:51.927471 [debug] [Thread-1 (]: On model.saas_analytics.stg_subscriptions: Close
+[0m04:18:51.928462 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7ba9946d-b7b1-469f-a6a6-17ecc817a70c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eb4283e0200>]}
+[0m04:18:51.929512 [info ] [Thread-1 (]: 5 of 43 OK created sql view model staging.stg_subscriptions .................... [[32mOK[0m in 0.07s]
+[0m04:18:51.930668 [debug] [Thread-1 (]: Finished running node model.saas_analytics.stg_subscriptions
+[0m04:18:51.931519 [debug] [Thread-1 (]: Began running node model.saas_analytics.int_invoice_payments
+[0m04:18:51.932957 [info ] [Thread-1 (]: 6 of 43 START sql view model intermediate.int_invoice_payments ................. [RUN]
+[0m04:18:51.934330 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.saas_analytics.stg_subscriptions, now model.saas_analytics.int_invoice_payments)
+[0m04:18:51.934994 [debug] [Thread-1 (]: Began compiling node model.saas_analytics.int_invoice_payments
+[0m04:18:51.938711 [debug] [Thread-1 (]: Writing injected SQL for node "model.saas_analytics.int_invoice_payments"
+[0m04:18:51.940580 [debug] [Thread-1 (]: Began executing node model.saas_analytics.int_invoice_payments
+[0m04:18:51.942394 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.int_invoice_payments"
+[0m04:18:51.943122 [debug] [Thread-1 (]: On model.saas_analytics.int_invoice_payments: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "model.saas_analytics.int_invoice_payments"} */
+
+                    select table_name, constraint_type from duckdb_constraints()
+                    where lower(database_name) = lower('saas')
+                      and lower(schema_name) = lower('intermediate')
+                      and constraint_type in ('PRIMARY KEY', 'UNIQUE', 'FOREIGN KEY')
+                    
+[0m04:18:51.943797 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m04:18:51.946687 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m04:18:51.951935 [debug] [Thread-1 (]: Writing runtime sql for node "model.saas_analytics.int_invoice_payments"
+[0m04:18:51.954096 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.int_invoice_payments"
+[0m04:18:51.955083 [debug] [Thread-1 (]: On model.saas_analytics.int_invoice_payments: BEGIN
+[0m04:18:51.956241 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m04:18:51.957012 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.int_invoice_payments"
+[0m04:18:51.958002 [debug] [Thread-1 (]: On model.saas_analytics.int_invoice_payments: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "model.saas_analytics.int_invoice_payments"} */
+
+  
+  create view "saas"."intermediate"."int_invoice_payments__dbt_tmp" as (
+    -- Invoices joined to their payments, with days-to-pay and a paid flag.
+
+with invoices as (
+
+    select * from "saas"."staging"."stg_invoices"
+
+),
+
+payments as (
+
+    select
+        invoice_id,
+        sum(amount_cents)   as paid_cents,
+        min(paid_at)        as first_paid_at,
+        count(*)            as payment_count
+    from "saas"."staging"."stg_payments"
+    group by invoice_id
+
+),
+
+joined as (
+
+    select
+        i.invoice_id,
+        i.account_id,
+        i.subscription_id,
+        i.invoice_date,
+        i.amount_cents,
+        i.amount_usd,
+        i.status,
+        i.is_credit_note,
+        coalesce(p.paid_cents, 0)                       as paid_cents,
+        p.first_paid_at,
+        coalesce(p.payment_count, 0)                    as payment_count,
+        date_diff('day', i.invoice_date, p.first_paid_at) as days_to_pay,
+        i.status = 'paid' and coalesce(p.paid_cents, 0) > 0 as is_paid
+    from invoices i
+    left join payments p using (invoice_id)
+
+)
+
+select * from joined
+  );
+
+[0m04:18:52.030006 [debug] [Thread-1 (]: SQL status: OK in 0.071 seconds
+[0m04:18:52.035695 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.int_invoice_payments"
+[0m04:18:52.037696 [debug] [Thread-1 (]: On model.saas_analytics.int_invoice_payments: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "model.saas_analytics.int_invoice_payments"} */
+alter view "saas"."intermediate"."int_invoice_payments__dbt_tmp" rename to "int_invoice_payments"
+[0m04:18:52.040813 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m04:18:52.044138 [debug] [Thread-1 (]: On model.saas_analytics.int_invoice_payments: COMMIT
+[0m04:18:52.045332 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.int_invoice_payments"
+[0m04:18:52.046387 [debug] [Thread-1 (]: On model.saas_analytics.int_invoice_payments: COMMIT
+[0m04:18:52.050653 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m04:18:52.054729 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.int_invoice_payments"
+[0m04:18:52.055727 [debug] [Thread-1 (]: On model.saas_analytics.int_invoice_payments: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "model.saas_analytics.int_invoice_payments"} */
+
+      drop view if exists "saas"."intermediate"."int_invoice_payments__dbt_backup" cascade
+    
+[0m04:18:52.057564 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:52.060057 [debug] [Thread-1 (]: On model.saas_analytics.int_invoice_payments: Close
+[0m04:18:52.061269 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7ba9946d-b7b1-469f-a6a6-17ecc817a70c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eb42836d5e0>]}
+[0m04:18:52.062453 [info ] [Thread-1 (]: 6 of 43 OK created sql view model intermediate.int_invoice_payments ............ [[32mOK[0m in 0.13s]
+[0m04:18:52.063709 [debug] [Thread-1 (]: Finished running node model.saas_analytics.int_invoice_payments
+[0m04:18:52.064560 [debug] [Thread-1 (]: Began running node model.saas_analytics.dim_accounts
+[0m04:18:52.065660 [info ] [Thread-1 (]: 7 of 43 START sql table model marts.dim_accounts ............................... [RUN]
+[0m04:18:52.066572 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.saas_analytics.int_invoice_payments, now model.saas_analytics.dim_accounts)
+[0m04:18:52.067441 [debug] [Thread-1 (]: Began compiling node model.saas_analytics.dim_accounts
+[0m04:18:52.071972 [debug] [Thread-1 (]: Writing injected SQL for node "model.saas_analytics.dim_accounts"
+[0m04:18:52.074205 [debug] [Thread-1 (]: Began executing node model.saas_analytics.dim_accounts
+[0m04:18:52.076101 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.dim_accounts"
+[0m04:18:52.076923 [debug] [Thread-1 (]: On model.saas_analytics.dim_accounts: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "model.saas_analytics.dim_accounts"} */
+
+                    select table_name, constraint_type from duckdb_constraints()
+                    where lower(database_name) = lower('saas')
+                      and lower(schema_name) = lower('marts')
+                      and constraint_type in ('PRIMARY KEY', 'UNIQUE', 'FOREIGN KEY')
+                    
+[0m04:18:52.077807 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m04:18:52.080535 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m04:18:52.187723 [debug] [Thread-1 (]: Writing runtime sql for node "model.saas_analytics.dim_accounts"
+[0m04:18:52.195360 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.dim_accounts"
+[0m04:18:52.196122 [debug] [Thread-1 (]: On model.saas_analytics.dim_accounts: BEGIN
+[0m04:18:52.197355 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:52.198111 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.dim_accounts"
+[0m04:18:52.198996 [debug] [Thread-1 (]: On model.saas_analytics.dim_accounts: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "model.saas_analytics.dim_accounts"} */
+
+    
+
+    create  table
+      "saas"."marts"."dim_accounts__dbt_tmp"
+  
+    
+    as (
+      -- Account dimension. Segment and industry come from the account record; the
+-- current plan and MRR come from the latest active subscription.
+
+with accounts as (
+
+    select * from "saas"."staging"."stg_accounts"
+
+),
+
+latest_subscription as (
+
+    select
+        account_id,
+        plan_id,
+        seats,
+        started_at,
+        ended_at,
+        status
+    from "saas"."staging"."stg_subscriptions"
+    qualify row_number() over (partition by account_id order by started_at desc) = 1
+
+),
+
+plans as (
+
+    select * from "saas"."staging"."stg_plans"
+
+)
+
+select
+    a.account_id,
+    a.account_name,
+    a.country,
+    a.industry,
+    a.segment,
+    a.created_at,
+    date_trunc('month', a.created_at)::date             as cohort_month,
+    l.plan_id                                           as current_plan_id,
+    p.plan_name                                         as current_plan_name,
+    l.seats                                             as current_seats,
+    l.status                                            as current_status,
+    l.started_at                                        as current_plan_started_at,
+    
+    round((p.monthly_price_cents * l.seats) / 100.0, 2)
+ as current_mrr_usd
+from accounts a
+left join latest_subscription l using (account_id)
+left join plans p using (plan_id)
+    );
+    
+  
+[0m04:18:52.273037 [debug] [Thread-1 (]: SQL status: OK in 0.073 seconds
+[0m04:18:52.295577 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.dim_accounts"
+[0m04:18:52.296664 [debug] [Thread-1 (]: On model.saas_analytics.dim_accounts: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "model.saas_analytics.dim_accounts"} */
+alter table "saas"."marts"."dim_accounts__dbt_tmp" rename to "dim_accounts"
+[0m04:18:52.299378 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:52.314385 [debug] [Thread-1 (]: On model.saas_analytics.dim_accounts: COMMIT
+[0m04:18:52.315829 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.dim_accounts"
+[0m04:18:52.317107 [debug] [Thread-1 (]: On model.saas_analytics.dim_accounts: COMMIT
+[0m04:18:52.329297 [debug] [Thread-1 (]: SQL status: OK in 0.011 seconds
+[0m04:18:52.332705 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.dim_accounts"
+[0m04:18:52.333463 [debug] [Thread-1 (]: On model.saas_analytics.dim_accounts: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "model.saas_analytics.dim_accounts"} */
+
+      drop table if exists "saas"."marts"."dim_accounts__dbt_backup" cascade
+    
+[0m04:18:52.334918 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:52.338073 [debug] [Thread-1 (]: On model.saas_analytics.dim_accounts: Close
+[0m04:18:52.339450 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7ba9946d-b7b1-469f-a6a6-17ecc817a70c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eb4298aa9c0>]}
+[0m04:18:52.341013 [info ] [Thread-1 (]: 7 of 43 OK created sql table model marts.dim_accounts .......................... [[32mOK[0m in 0.27s]
+[0m04:18:52.342370 [debug] [Thread-1 (]: Finished running node model.saas_analytics.dim_accounts
+[0m04:18:52.343297 [debug] [Thread-1 (]: Began running node model.saas_analytics.int_subscription_months
+[0m04:18:52.344736 [info ] [Thread-1 (]: 8 of 43 START sql view model intermediate.int_subscription_months .............. [RUN]
+[0m04:18:52.345787 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.saas_analytics.dim_accounts, now model.saas_analytics.int_subscription_months)
+[0m04:18:52.346603 [debug] [Thread-1 (]: Began compiling node model.saas_analytics.int_subscription_months
+[0m04:18:52.352035 [debug] [Thread-1 (]: Writing injected SQL for node "model.saas_analytics.int_subscription_months"
+[0m04:18:52.354856 [debug] [Thread-1 (]: Began executing node model.saas_analytics.int_subscription_months
+[0m04:18:52.359897 [debug] [Thread-1 (]: Writing runtime sql for node "model.saas_analytics.int_subscription_months"
+[0m04:18:52.362085 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.int_subscription_months"
+[0m04:18:52.363043 [debug] [Thread-1 (]: On model.saas_analytics.int_subscription_months: BEGIN
+[0m04:18:52.363865 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m04:18:52.365354 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:52.366118 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.int_subscription_months"
+[0m04:18:52.367040 [debug] [Thread-1 (]: On model.saas_analytics.int_subscription_months: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "model.saas_analytics.int_subscription_months"} */
+
+  
+  create view "saas"."intermediate"."int_subscription_months__dbt_tmp" as (
+    -- One row per subscription per calendar month it was active. This is the spine
+-- every MRR metric is built on: if a subscription covers five months, it appears
+-- five times with one twelfth of nothing - the full monthly price each time.
+
+with months as (
+
+    select unnest(
+        generate_series(
+            (select date_trunc('month', min(started_at)) from "saas"."staging"."stg_subscriptions"),
+            (select date_trunc('month', max(active_until)) from "saas"."staging"."stg_subscriptions"),
+            interval 1 month
+        )
+    )::date as month_start
+
+),
+
+subscriptions as (
+
+    select * from "saas"."staging"."stg_subscriptions"
+
+),
+
+expanded as (
+
+    select
+        s.subscription_id,
+        s.account_id,
+        s.plan_id,
+        s.seats,
+        s.status,
+        s.started_at,
+        s.ended_at,
+        m.month_start,
+        m.month_start = date_trunc('month', s.started_at)::date  as is_first_month,
+        m.month_start = date_trunc('month', s.active_until)::date as is_last_month
+    from subscriptions s
+    inner join months m
+        on m.month_start >= date_trunc('month', s.started_at)::date
+       and m.month_start <= date_trunc('month', s.active_until)::date
+
+)
+
+select * from expanded
+  );
+
+[0m04:18:52.412129 [debug] [Thread-1 (]: SQL status: OK in 0.044 seconds
+[0m04:18:52.416612 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.int_subscription_months"
+[0m04:18:52.417604 [debug] [Thread-1 (]: On model.saas_analytics.int_subscription_months: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "model.saas_analytics.int_subscription_months"} */
+alter view "saas"."intermediate"."int_subscription_months__dbt_tmp" rename to "int_subscription_months"
+[0m04:18:52.419276 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:52.421795 [debug] [Thread-1 (]: On model.saas_analytics.int_subscription_months: COMMIT
+[0m04:18:52.422517 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.int_subscription_months"
+[0m04:18:52.423206 [debug] [Thread-1 (]: On model.saas_analytics.int_subscription_months: COMMIT
+[0m04:18:52.430910 [debug] [Thread-1 (]: SQL status: OK in 0.007 seconds
+[0m04:18:52.434128 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.int_subscription_months"
+[0m04:18:52.434844 [debug] [Thread-1 (]: On model.saas_analytics.int_subscription_months: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "model.saas_analytics.int_subscription_months"} */
+
+      drop view if exists "saas"."intermediate"."int_subscription_months__dbt_backup" cascade
+    
+[0m04:18:52.436257 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:52.438775 [debug] [Thread-1 (]: On model.saas_analytics.int_subscription_months: Close
+[0m04:18:52.439777 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7ba9946d-b7b1-469f-a6a6-17ecc817a70c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eb4293912b0>]}
+[0m04:18:52.440897 [info ] [Thread-1 (]: 8 of 43 OK created sql view model intermediate.int_subscription_months ......... [[32mOK[0m in 0.09s]
+[0m04:18:52.442062 [debug] [Thread-1 (]: Finished running node model.saas_analytics.int_subscription_months
+[0m04:18:52.442836 [debug] [Thread-1 (]: Began running node model.saas_analytics.fct_invoices
+[0m04:18:52.443822 [info ] [Thread-1 (]: 9 of 43 START sql table model marts.fct_invoices ............................... [RUN]
+[0m04:18:52.444775 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.saas_analytics.int_subscription_months, now model.saas_analytics.fct_invoices)
+[0m04:18:52.445470 [debug] [Thread-1 (]: Began compiling node model.saas_analytics.fct_invoices
+[0m04:18:52.448765 [debug] [Thread-1 (]: Writing injected SQL for node "model.saas_analytics.fct_invoices"
+[0m04:18:52.450505 [debug] [Thread-1 (]: Began executing node model.saas_analytics.fct_invoices
+[0m04:18:52.456144 [debug] [Thread-1 (]: Writing runtime sql for node "model.saas_analytics.fct_invoices"
+[0m04:18:52.457950 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.fct_invoices"
+[0m04:18:52.458672 [debug] [Thread-1 (]: On model.saas_analytics.fct_invoices: BEGIN
+[0m04:18:52.459301 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m04:18:52.460491 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:52.461215 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.fct_invoices"
+[0m04:18:52.462004 [debug] [Thread-1 (]: On model.saas_analytics.fct_invoices: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "model.saas_analytics.fct_invoices"} */
+
+    
+
+    create  table
+      "saas"."marts"."fct_invoices__dbt_tmp"
+  
+    
+    as (
+      -- Invoice fact: one row per invoice, with payment behaviour attached.
+-- Credit notes stay in the table but are excluded from revenue by the marts.
+
+select
+    invoice_id,
+    account_id,
+    subscription_id,
+    invoice_date,
+    date_trunc('month', invoice_date)::date     as invoice_month,
+    amount_cents,
+    amount_usd,
+    status,
+    is_credit_note,
+    paid_cents,
+    first_paid_at,
+    days_to_pay,
+    is_paid,
+    case
+        when days_to_pay is null then null
+        when days_to_pay <= 0 then 'same day'
+        when days_to_pay <= 7 then '0-7 days'
+        when days_to_pay <= 30 then '8-30 days'
+        else '30+ days'
+    end                                          as payment_speed
+from "saas"."intermediate"."int_invoice_payments"
+    );
+    
+  
+[0m04:18:52.531539 [debug] [Thread-1 (]: SQL status: OK in 0.069 seconds
+[0m04:18:52.537334 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.fct_invoices"
+[0m04:18:52.538273 [debug] [Thread-1 (]: On model.saas_analytics.fct_invoices: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "model.saas_analytics.fct_invoices"} */
+alter table "saas"."marts"."fct_invoices__dbt_tmp" rename to "fct_invoices"
+[0m04:18:52.540217 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:52.543005 [debug] [Thread-1 (]: On model.saas_analytics.fct_invoices: COMMIT
+[0m04:18:52.543920 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.fct_invoices"
+[0m04:18:52.544679 [debug] [Thread-1 (]: On model.saas_analytics.fct_invoices: COMMIT
+[0m04:18:52.554677 [debug] [Thread-1 (]: SQL status: OK in 0.009 seconds
+[0m04:18:52.558005 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.fct_invoices"
+[0m04:18:52.558791 [debug] [Thread-1 (]: On model.saas_analytics.fct_invoices: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "model.saas_analytics.fct_invoices"} */
+
+      drop table if exists "saas"."marts"."fct_invoices__dbt_backup" cascade
+    
+[0m04:18:52.560576 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:52.563059 [debug] [Thread-1 (]: On model.saas_analytics.fct_invoices: Close
+[0m04:18:52.593892 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7ba9946d-b7b1-469f-a6a6-17ecc817a70c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eb42831ba40>]}
+[0m04:18:52.595408 [info ] [Thread-1 (]: 9 of 43 OK created sql table model marts.fct_invoices .......................... [[32mOK[0m in 0.15s]
+[0m04:18:52.596841 [debug] [Thread-1 (]: Finished running node model.saas_analytics.fct_invoices
+[0m04:18:52.597809 [debug] [Thread-1 (]: Began running node test.saas_analytics.accepted_values_dim_accounts_segment__smb__mid__enterprise.866d21a5e0
+[0m04:18:52.599245 [info ] [Thread-1 (]: 10 of 43 START test accepted_values_dim_accounts_segment__smb__mid__enterprise . [RUN]
+[0m04:18:52.601005 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.saas_analytics.fct_invoices, now test.saas_analytics.accepted_values_dim_accounts_segment__smb__mid__enterprise.866d21a5e0)
+[0m04:18:52.601795 [debug] [Thread-1 (]: Began compiling node test.saas_analytics.accepted_values_dim_accounts_segment__smb__mid__enterprise.866d21a5e0
+[0m04:18:52.614553 [debug] [Thread-1 (]: Writing injected SQL for node "test.saas_analytics.accepted_values_dim_accounts_segment__smb__mid__enterprise.866d21a5e0"
+[0m04:18:52.616645 [debug] [Thread-1 (]: Began executing node test.saas_analytics.accepted_values_dim_accounts_segment__smb__mid__enterprise.866d21a5e0
+[0m04:18:52.618598 [debug] [Thread-1 (]: Using duckdb connection "test.saas_analytics.accepted_values_dim_accounts_segment__smb__mid__enterprise.866d21a5e0"
+[0m04:18:52.619349 [debug] [Thread-1 (]: On test.saas_analytics.accepted_values_dim_accounts_segment__smb__mid__enterprise.866d21a5e0: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "test.saas_analytics.accepted_values_dim_accounts_segment__smb__mid__enterprise.866d21a5e0"} */
+
+                    select table_name, constraint_type from duckdb_constraints()
+                    where lower(database_name) = lower('saas')
+                      and lower(schema_name) = lower('dbt_test__audit')
+                      and constraint_type in ('PRIMARY KEY', 'UNIQUE', 'FOREIGN KEY')
+                    
+[0m04:18:52.620061 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m04:18:52.622803 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m04:18:52.661109 [debug] [Thread-1 (]: Writing runtime sql for node "test.saas_analytics.accepted_values_dim_accounts_segment__smb__mid__enterprise.866d21a5e0"
+[0m04:18:52.663622 [debug] [Thread-1 (]: Using duckdb connection "test.saas_analytics.accepted_values_dim_accounts_segment__smb__mid__enterprise.866d21a5e0"
+[0m04:18:52.664357 [debug] [Thread-1 (]: On test.saas_analytics.accepted_values_dim_accounts_segment__smb__mid__enterprise.866d21a5e0: BEGIN
+[0m04:18:52.665456 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m04:18:52.666091 [debug] [Thread-1 (]: Using duckdb connection "test.saas_analytics.accepted_values_dim_accounts_segment__smb__mid__enterprise.866d21a5e0"
+[0m04:18:52.666863 [debug] [Thread-1 (]: On test.saas_analytics.accepted_values_dim_accounts_segment__smb__mid__enterprise.866d21a5e0: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "test.saas_analytics.accepted_values_dim_accounts_segment__smb__mid__enterprise.866d21a5e0"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        segment as value_field,
+        count(*) as n_records
+
+    from "saas"."marts"."dim_accounts"
+    group by segment
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'smb','mid','enterprise'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m04:18:52.670553 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m04:18:52.679030 [debug] [Thread-1 (]: On test.saas_analytics.accepted_values_dim_accounts_segment__smb__mid__enterprise.866d21a5e0: ROLLBACK
+[0m04:18:52.680553 [debug] [Thread-1 (]: On test.saas_analytics.accepted_values_dim_accounts_segment__smb__mid__enterprise.866d21a5e0: Close
+[0m04:18:52.681707 [info ] [Thread-1 (]: 10 of 43 PASS accepted_values_dim_accounts_segment__smb__mid__enterprise ....... [[32mPASS[0m in 0.08s]
+[0m04:18:52.682934 [debug] [Thread-1 (]: Finished running node test.saas_analytics.accepted_values_dim_accounts_segment__smb__mid__enterprise.866d21a5e0
+[0m04:18:52.683824 [debug] [Thread-1 (]: Began running node test.saas_analytics.not_null_dim_accounts_account_id.cc26245841
+[0m04:18:52.684713 [info ] [Thread-1 (]: 11 of 43 START test not_null_dim_accounts_account_id ........................... [RUN]
+[0m04:18:52.685702 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.saas_analytics.accepted_values_dim_accounts_segment__smb__mid__enterprise.866d21a5e0, now test.saas_analytics.not_null_dim_accounts_account_id.cc26245841)
+[0m04:18:52.686374 [debug] [Thread-1 (]: Began compiling node test.saas_analytics.not_null_dim_accounts_account_id.cc26245841
+[0m04:18:52.710207 [debug] [Thread-1 (]: Writing injected SQL for node "test.saas_analytics.not_null_dim_accounts_account_id.cc26245841"
+[0m04:18:52.712077 [debug] [Thread-1 (]: Began executing node test.saas_analytics.not_null_dim_accounts_account_id.cc26245841
+[0m04:18:52.715518 [debug] [Thread-1 (]: Writing runtime sql for node "test.saas_analytics.not_null_dim_accounts_account_id.cc26245841"
+[0m04:18:52.717507 [debug] [Thread-1 (]: Using duckdb connection "test.saas_analytics.not_null_dim_accounts_account_id.cc26245841"
+[0m04:18:52.718330 [debug] [Thread-1 (]: On test.saas_analytics.not_null_dim_accounts_account_id.cc26245841: BEGIN
+[0m04:18:52.719026 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m04:18:52.720305 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:52.720967 [debug] [Thread-1 (]: Using duckdb connection "test.saas_analytics.not_null_dim_accounts_account_id.cc26245841"
+[0m04:18:52.721659 [debug] [Thread-1 (]: On test.saas_analytics.not_null_dim_accounts_account_id.cc26245841: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "test.saas_analytics.not_null_dim_accounts_account_id.cc26245841"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select account_id
+from "saas"."marts"."dim_accounts"
+where account_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m04:18:52.723815 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:52.726819 [debug] [Thread-1 (]: On test.saas_analytics.not_null_dim_accounts_account_id.cc26245841: ROLLBACK
+[0m04:18:52.727913 [debug] [Thread-1 (]: On test.saas_analytics.not_null_dim_accounts_account_id.cc26245841: Close
+[0m04:18:52.729017 [info ] [Thread-1 (]: 11 of 43 PASS not_null_dim_accounts_account_id ................................. [[32mPASS[0m in 0.04s]
+[0m04:18:52.730127 [debug] [Thread-1 (]: Finished running node test.saas_analytics.not_null_dim_accounts_account_id.cc26245841
+[0m04:18:52.731023 [debug] [Thread-1 (]: Began running node test.saas_analytics.not_null_dim_accounts_cohort_month.9a558a4135
+[0m04:18:52.731921 [info ] [Thread-1 (]: 12 of 43 START test not_null_dim_accounts_cohort_month ......................... [RUN]
+[0m04:18:52.732838 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.saas_analytics.not_null_dim_accounts_account_id.cc26245841, now test.saas_analytics.not_null_dim_accounts_cohort_month.9a558a4135)
+[0m04:18:52.733516 [debug] [Thread-1 (]: Began compiling node test.saas_analytics.not_null_dim_accounts_cohort_month.9a558a4135
+[0m04:18:52.746239 [debug] [Thread-1 (]: Writing injected SQL for node "test.saas_analytics.not_null_dim_accounts_cohort_month.9a558a4135"
+[0m04:18:52.748172 [debug] [Thread-1 (]: Began executing node test.saas_analytics.not_null_dim_accounts_cohort_month.9a558a4135
+[0m04:18:52.751209 [debug] [Thread-1 (]: Writing runtime sql for node "test.saas_analytics.not_null_dim_accounts_cohort_month.9a558a4135"
+[0m04:18:52.753011 [debug] [Thread-1 (]: Using duckdb connection "test.saas_analytics.not_null_dim_accounts_cohort_month.9a558a4135"
+[0m04:18:52.753728 [debug] [Thread-1 (]: On test.saas_analytics.not_null_dim_accounts_cohort_month.9a558a4135: BEGIN
+[0m04:18:52.754435 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m04:18:52.755869 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:52.756521 [debug] [Thread-1 (]: Using duckdb connection "test.saas_analytics.not_null_dim_accounts_cohort_month.9a558a4135"
+[0m04:18:52.757297 [debug] [Thread-1 (]: On test.saas_analytics.not_null_dim_accounts_cohort_month.9a558a4135: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "test.saas_analytics.not_null_dim_accounts_cohort_month.9a558a4135"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select cohort_month
+from "saas"."marts"."dim_accounts"
+where cohort_month is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m04:18:52.759420 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:52.762121 [debug] [Thread-1 (]: On test.saas_analytics.not_null_dim_accounts_cohort_month.9a558a4135: ROLLBACK
+[0m04:18:52.763201 [debug] [Thread-1 (]: On test.saas_analytics.not_null_dim_accounts_cohort_month.9a558a4135: Close
+[0m04:18:52.764350 [info ] [Thread-1 (]: 12 of 43 PASS not_null_dim_accounts_cohort_month ............................... [[32mPASS[0m in 0.03s]
+[0m04:18:52.765509 [debug] [Thread-1 (]: Finished running node test.saas_analytics.not_null_dim_accounts_cohort_month.9a558a4135
+[0m04:18:52.766267 [debug] [Thread-1 (]: Began running node test.saas_analytics.unique_dim_accounts_account_id.bfd6344edc
+[0m04:18:52.767649 [info ] [Thread-1 (]: 13 of 43 START test unique_dim_accounts_account_id ............................. [RUN]
+[0m04:18:52.768596 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.saas_analytics.not_null_dim_accounts_cohort_month.9a558a4135, now test.saas_analytics.unique_dim_accounts_account_id.bfd6344edc)
+[0m04:18:52.769299 [debug] [Thread-1 (]: Began compiling node test.saas_analytics.unique_dim_accounts_account_id.bfd6344edc
+[0m04:18:52.785508 [debug] [Thread-1 (]: Writing injected SQL for node "test.saas_analytics.unique_dim_accounts_account_id.bfd6344edc"
+[0m04:18:52.794852 [debug] [Thread-1 (]: Began executing node test.saas_analytics.unique_dim_accounts_account_id.bfd6344edc
+[0m04:18:52.798375 [debug] [Thread-1 (]: Writing runtime sql for node "test.saas_analytics.unique_dim_accounts_account_id.bfd6344edc"
+[0m04:18:52.800195 [debug] [Thread-1 (]: Using duckdb connection "test.saas_analytics.unique_dim_accounts_account_id.bfd6344edc"
+[0m04:18:52.800920 [debug] [Thread-1 (]: On test.saas_analytics.unique_dim_accounts_account_id.bfd6344edc: BEGIN
+[0m04:18:52.801623 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m04:18:52.803009 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:52.803693 [debug] [Thread-1 (]: Using duckdb connection "test.saas_analytics.unique_dim_accounts_account_id.bfd6344edc"
+[0m04:18:52.804402 [debug] [Thread-1 (]: On test.saas_analytics.unique_dim_accounts_account_id.bfd6344edc: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "test.saas_analytics.unique_dim_accounts_account_id.bfd6344edc"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    account_id as unique_field,
+    count(*) as n_records
+
+from "saas"."marts"."dim_accounts"
+where account_id is not null
+group by account_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m04:18:52.808050 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m04:18:52.811027 [debug] [Thread-1 (]: On test.saas_analytics.unique_dim_accounts_account_id.bfd6344edc: ROLLBACK
+[0m04:18:52.812503 [debug] [Thread-1 (]: On test.saas_analytics.unique_dim_accounts_account_id.bfd6344edc: Close
+[0m04:18:52.813822 [info ] [Thread-1 (]: 13 of 43 PASS unique_dim_accounts_account_id ................................... [[32mPASS[0m in 0.05s]
+[0m04:18:52.815028 [debug] [Thread-1 (]: Finished running node test.saas_analytics.unique_dim_accounts_account_id.bfd6344edc
+[0m04:18:52.815867 [debug] [Thread-1 (]: Began running node test.saas_analytics.accepted_values_fct_invoices_payment_speed__same_day__0_7_days__8_30_days__30_days.cc6bb0f8d8
+[0m04:18:52.817155 [info ] [Thread-1 (]: 14 of 43 START test accepted_values_fct_invoices_payment_speed__same_day__0_7_days__8_30_days__30_days  [RUN]
+[0m04:18:52.818160 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.saas_analytics.unique_dim_accounts_account_id.bfd6344edc, now test.saas_analytics.accepted_values_fct_invoices_payment_speed__same_day__0_7_days__8_30_days__30_days.cc6bb0f8d8)
+[0m04:18:52.818896 [debug] [Thread-1 (]: Began compiling node test.saas_analytics.accepted_values_fct_invoices_payment_speed__same_day__0_7_days__8_30_days__30_days.cc6bb0f8d8
+[0m04:18:52.831793 [debug] [Thread-1 (]: Writing injected SQL for node "test.saas_analytics.accepted_values_fct_invoices_payment_speed__same_day__0_7_days__8_30_days__30_days.cc6bb0f8d8"
+[0m04:18:52.833530 [debug] [Thread-1 (]: Began executing node test.saas_analytics.accepted_values_fct_invoices_payment_speed__same_day__0_7_days__8_30_days__30_days.cc6bb0f8d8
+[0m04:18:52.836432 [debug] [Thread-1 (]: Writing runtime sql for node "test.saas_analytics.accepted_values_fct_invoices_payment_speed__same_day__0_7_days__8_30_days__30_days.cc6bb0f8d8"
+[0m04:18:52.838430 [debug] [Thread-1 (]: Using duckdb connection "test.saas_analytics.accepted_values_fct_invoices_payment_speed__same_day__0_7_days__8_30_days__30_days.cc6bb0f8d8"
+[0m04:18:52.839315 [debug] [Thread-1 (]: On test.saas_analytics.accepted_values_fct_invoices_payment_speed__same_day__0_7_days__8_30_days__30_days.cc6bb0f8d8: BEGIN
+[0m04:18:52.840020 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m04:18:52.841270 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:52.842001 [debug] [Thread-1 (]: Using duckdb connection "test.saas_analytics.accepted_values_fct_invoices_payment_speed__same_day__0_7_days__8_30_days__30_days.cc6bb0f8d8"
+[0m04:18:52.842757 [debug] [Thread-1 (]: On test.saas_analytics.accepted_values_fct_invoices_payment_speed__same_day__0_7_days__8_30_days__30_days.cc6bb0f8d8: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "test.saas_analytics.accepted_values_fct_invoices_payment_speed__same_day__0_7_days__8_30_days__30_days.cc6bb0f8d8"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        payment_speed as value_field,
+        count(*) as n_records
+
+    from (select * from "saas"."marts"."fct_invoices" where is_paid) dbt_subquery
+    group by payment_speed
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'same day','0-7 days','8-30 days','30+ days'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m04:18:52.846446 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m04:18:52.849533 [debug] [Thread-1 (]: On test.saas_analytics.accepted_values_fct_invoices_payment_speed__same_day__0_7_days__8_30_days__30_days.cc6bb0f8d8: ROLLBACK
+[0m04:18:52.851117 [debug] [Thread-1 (]: On test.saas_analytics.accepted_values_fct_invoices_payment_speed__same_day__0_7_days__8_30_days__30_days.cc6bb0f8d8: Close
+[0m04:18:52.852453 [info ] [Thread-1 (]: 14 of 43 PASS accepted_values_fct_invoices_payment_speed__same_day__0_7_days__8_30_days__30_days  [[32mPASS[0m in 0.03s]
+[0m04:18:52.853711 [debug] [Thread-1 (]: Finished running node test.saas_analytics.accepted_values_fct_invoices_payment_speed__same_day__0_7_days__8_30_days__30_days.cc6bb0f8d8
+[0m04:18:52.854504 [debug] [Thread-1 (]: Began running node test.saas_analytics.accepted_values_fct_invoices_status__paid__open__void.ce5893acd3
+[0m04:18:52.855382 [info ] [Thread-1 (]: 15 of 43 START test accepted_values_fct_invoices_status__paid__open__void ...... [RUN]
+[0m04:18:52.856366 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.saas_analytics.accepted_values_fct_invoices_payment_speed__same_day__0_7_days__8_30_days__30_days.cc6bb0f8d8, now test.saas_analytics.accepted_values_fct_invoices_status__paid__open__void.ce5893acd3)
+[0m04:18:52.857130 [debug] [Thread-1 (]: Began compiling node test.saas_analytics.accepted_values_fct_invoices_status__paid__open__void.ce5893acd3
+[0m04:18:52.872005 [debug] [Thread-1 (]: Writing injected SQL for node "test.saas_analytics.accepted_values_fct_invoices_status__paid__open__void.ce5893acd3"
+[0m04:18:52.875416 [debug] [Thread-1 (]: Began executing node test.saas_analytics.accepted_values_fct_invoices_status__paid__open__void.ce5893acd3
+[0m04:18:52.879392 [debug] [Thread-1 (]: Writing runtime sql for node "test.saas_analytics.accepted_values_fct_invoices_status__paid__open__void.ce5893acd3"
+[0m04:18:52.881646 [debug] [Thread-1 (]: Using duckdb connection "test.saas_analytics.accepted_values_fct_invoices_status__paid__open__void.ce5893acd3"
+[0m04:18:52.882468 [debug] [Thread-1 (]: On test.saas_analytics.accepted_values_fct_invoices_status__paid__open__void.ce5893acd3: BEGIN
+[0m04:18:52.893555 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m04:18:52.895489 [debug] [Thread-1 (]: SQL status: OK in 0.012 seconds
+[0m04:18:52.896241 [debug] [Thread-1 (]: Using duckdb connection "test.saas_analytics.accepted_values_fct_invoices_status__paid__open__void.ce5893acd3"
+[0m04:18:52.897037 [debug] [Thread-1 (]: On test.saas_analytics.accepted_values_fct_invoices_status__paid__open__void.ce5893acd3: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "test.saas_analytics.accepted_values_fct_invoices_status__paid__open__void.ce5893acd3"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        status as value_field,
+        count(*) as n_records
+
+    from "saas"."marts"."fct_invoices"
+    group by status
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'paid','open','void'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m04:18:52.900030 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m04:18:52.902842 [debug] [Thread-1 (]: On test.saas_analytics.accepted_values_fct_invoices_status__paid__open__void.ce5893acd3: ROLLBACK
+[0m04:18:52.904384 [debug] [Thread-1 (]: On test.saas_analytics.accepted_values_fct_invoices_status__paid__open__void.ce5893acd3: Close
+[0m04:18:52.905615 [info ] [Thread-1 (]: 15 of 43 PASS accepted_values_fct_invoices_status__paid__open__void ............ [[32mPASS[0m in 0.05s]
+[0m04:18:52.906794 [debug] [Thread-1 (]: Finished running node test.saas_analytics.accepted_values_fct_invoices_status__paid__open__void.ce5893acd3
+[0m04:18:52.907603 [debug] [Thread-1 (]: Began running node test.saas_analytics.assert_paid_invoices_have_payments
+[0m04:18:52.908415 [info ] [Thread-1 (]: 16 of 43 START test assert_paid_invoices_have_payments ......................... [RUN]
+[0m04:18:52.909429 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.saas_analytics.accepted_values_fct_invoices_status__paid__open__void.ce5893acd3, now test.saas_analytics.assert_paid_invoices_have_payments)
+[0m04:18:52.910138 [debug] [Thread-1 (]: Began compiling node test.saas_analytics.assert_paid_invoices_have_payments
+[0m04:18:52.913207 [debug] [Thread-1 (]: Writing injected SQL for node "test.saas_analytics.assert_paid_invoices_have_payments"
+[0m04:18:52.915243 [debug] [Thread-1 (]: Began executing node test.saas_analytics.assert_paid_invoices_have_payments
+[0m04:18:52.918760 [debug] [Thread-1 (]: Writing runtime sql for node "test.saas_analytics.assert_paid_invoices_have_payments"
+[0m04:18:52.920966 [debug] [Thread-1 (]: Using duckdb connection "test.saas_analytics.assert_paid_invoices_have_payments"
+[0m04:18:52.921727 [debug] [Thread-1 (]: On test.saas_analytics.assert_paid_invoices_have_payments: BEGIN
+[0m04:18:52.922367 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m04:18:52.923577 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:52.924285 [debug] [Thread-1 (]: Using duckdb connection "test.saas_analytics.assert_paid_invoices_have_payments"
+[0m04:18:52.925053 [debug] [Thread-1 (]: On test.saas_analytics.assert_paid_invoices_have_payments: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "test.saas_analytics.assert_paid_invoices_have_payments"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  -- Every invoice marked paid must have a payment row covering at least 99% of
+-- its amount (1% tolerance for rounding in the source export).
+
+select
+    invoice_id,
+    amount_cents,
+    paid_cents
+from "saas"."marts"."fct_invoices"
+where status = 'paid'
+  and abs(paid_cents - amount_cents) > abs(amount_cents) * 0.01
+  
+  
+      
+    ) dbt_internal_test
+[0m04:18:52.928342 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m04:18:52.931119 [debug] [Thread-1 (]: On test.saas_analytics.assert_paid_invoices_have_payments: ROLLBACK
+[0m04:18:52.932166 [debug] [Thread-1 (]: On test.saas_analytics.assert_paid_invoices_have_payments: Close
+[0m04:18:52.933276 [info ] [Thread-1 (]: 16 of 43 PASS assert_paid_invoices_have_payments ............................... [[32mPASS[0m in 0.02s]
+[0m04:18:52.934419 [debug] [Thread-1 (]: Finished running node test.saas_analytics.assert_paid_invoices_have_payments
+[0m04:18:52.935208 [debug] [Thread-1 (]: Began running node test.saas_analytics.not_null_fct_invoices_account_id.edb1de1fb6
+[0m04:18:52.936051 [info ] [Thread-1 (]: 17 of 43 START test not_null_fct_invoices_account_id ........................... [RUN]
+[0m04:18:52.937053 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.saas_analytics.assert_paid_invoices_have_payments, now test.saas_analytics.not_null_fct_invoices_account_id.edb1de1fb6)
+[0m04:18:52.937798 [debug] [Thread-1 (]: Began compiling node test.saas_analytics.not_null_fct_invoices_account_id.edb1de1fb6
+[0m04:18:52.949965 [debug] [Thread-1 (]: Writing injected SQL for node "test.saas_analytics.not_null_fct_invoices_account_id.edb1de1fb6"
+[0m04:18:52.951906 [debug] [Thread-1 (]: Began executing node test.saas_analytics.not_null_fct_invoices_account_id.edb1de1fb6
+[0m04:18:52.955376 [debug] [Thread-1 (]: Writing runtime sql for node "test.saas_analytics.not_null_fct_invoices_account_id.edb1de1fb6"
+[0m04:18:52.957390 [debug] [Thread-1 (]: Using duckdb connection "test.saas_analytics.not_null_fct_invoices_account_id.edb1de1fb6"
+[0m04:18:52.958186 [debug] [Thread-1 (]: On test.saas_analytics.not_null_fct_invoices_account_id.edb1de1fb6: BEGIN
+[0m04:18:52.958857 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m04:18:52.960057 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:52.960772 [debug] [Thread-1 (]: Using duckdb connection "test.saas_analytics.not_null_fct_invoices_account_id.edb1de1fb6"
+[0m04:18:52.961513 [debug] [Thread-1 (]: On test.saas_analytics.not_null_fct_invoices_account_id.edb1de1fb6: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "test.saas_analytics.not_null_fct_invoices_account_id.edb1de1fb6"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select account_id
+from "saas"."marts"."fct_invoices"
+where account_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m04:18:52.963774 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:52.967505 [debug] [Thread-1 (]: On test.saas_analytics.not_null_fct_invoices_account_id.edb1de1fb6: ROLLBACK
+[0m04:18:52.969232 [debug] [Thread-1 (]: On test.saas_analytics.not_null_fct_invoices_account_id.edb1de1fb6: Close
+[0m04:18:52.970550 [info ] [Thread-1 (]: 17 of 43 PASS not_null_fct_invoices_account_id ................................. [[32mPASS[0m in 0.03s]
+[0m04:18:52.971827 [debug] [Thread-1 (]: Finished running node test.saas_analytics.not_null_fct_invoices_account_id.edb1de1fb6
+[0m04:18:52.972690 [debug] [Thread-1 (]: Began running node test.saas_analytics.not_null_fct_invoices_invoice_id.52a055ef3f
+[0m04:18:52.973547 [info ] [Thread-1 (]: 18 of 43 START test not_null_fct_invoices_invoice_id ........................... [RUN]
+[0m04:18:52.974474 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.saas_analytics.not_null_fct_invoices_account_id.edb1de1fb6, now test.saas_analytics.not_null_fct_invoices_invoice_id.52a055ef3f)
+[0m04:18:52.975263 [debug] [Thread-1 (]: Began compiling node test.saas_analytics.not_null_fct_invoices_invoice_id.52a055ef3f
+[0m04:18:52.994082 [debug] [Thread-1 (]: Writing injected SQL for node "test.saas_analytics.not_null_fct_invoices_invoice_id.52a055ef3f"
+[0m04:18:52.995989 [debug] [Thread-1 (]: Began executing node test.saas_analytics.not_null_fct_invoices_invoice_id.52a055ef3f
+[0m04:18:52.999089 [debug] [Thread-1 (]: Writing runtime sql for node "test.saas_analytics.not_null_fct_invoices_invoice_id.52a055ef3f"
+[0m04:18:53.000889 [debug] [Thread-1 (]: Using duckdb connection "test.saas_analytics.not_null_fct_invoices_invoice_id.52a055ef3f"
+[0m04:18:53.001783 [debug] [Thread-1 (]: On test.saas_analytics.not_null_fct_invoices_invoice_id.52a055ef3f: BEGIN
+[0m04:18:53.002570 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m04:18:53.004350 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m04:18:53.005235 [debug] [Thread-1 (]: Using duckdb connection "test.saas_analytics.not_null_fct_invoices_invoice_id.52a055ef3f"
+[0m04:18:53.006388 [debug] [Thread-1 (]: On test.saas_analytics.not_null_fct_invoices_invoice_id.52a055ef3f: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "test.saas_analytics.not_null_fct_invoices_invoice_id.52a055ef3f"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select invoice_id
+from "saas"."marts"."fct_invoices"
+where invoice_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m04:18:53.008868 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m04:18:53.011749 [debug] [Thread-1 (]: On test.saas_analytics.not_null_fct_invoices_invoice_id.52a055ef3f: ROLLBACK
+[0m04:18:53.013327 [debug] [Thread-1 (]: On test.saas_analytics.not_null_fct_invoices_invoice_id.52a055ef3f: Close
+[0m04:18:53.014510 [info ] [Thread-1 (]: 18 of 43 PASS not_null_fct_invoices_invoice_id ................................. [[32mPASS[0m in 0.04s]
+[0m04:18:53.015647 [debug] [Thread-1 (]: Finished running node test.saas_analytics.not_null_fct_invoices_invoice_id.52a055ef3f
+[0m04:18:53.016828 [debug] [Thread-1 (]: Began running node test.saas_analytics.relationships_fct_invoices_account_id__account_id__ref_dim_accounts_.1094aa63fc
+[0m04:18:53.017704 [info ] [Thread-1 (]: 19 of 43 START test relationships_fct_invoices_account_id__account_id__ref_dim_accounts_  [RUN]
+[0m04:18:53.018733 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.saas_analytics.not_null_fct_invoices_invoice_id.52a055ef3f, now test.saas_analytics.relationships_fct_invoices_account_id__account_id__ref_dim_accounts_.1094aa63fc)
+[0m04:18:53.019510 [debug] [Thread-1 (]: Began compiling node test.saas_analytics.relationships_fct_invoices_account_id__account_id__ref_dim_accounts_.1094aa63fc
+[0m04:18:53.040598 [debug] [Thread-1 (]: Writing injected SQL for node "test.saas_analytics.relationships_fct_invoices_account_id__account_id__ref_dim_accounts_.1094aa63fc"
+[0m04:18:53.042484 [debug] [Thread-1 (]: Began executing node test.saas_analytics.relationships_fct_invoices_account_id__account_id__ref_dim_accounts_.1094aa63fc
+[0m04:18:53.045807 [debug] [Thread-1 (]: Writing runtime sql for node "test.saas_analytics.relationships_fct_invoices_account_id__account_id__ref_dim_accounts_.1094aa63fc"
+[0m04:18:53.047814 [debug] [Thread-1 (]: Using duckdb connection "test.saas_analytics.relationships_fct_invoices_account_id__account_id__ref_dim_accounts_.1094aa63fc"
+[0m04:18:53.048602 [debug] [Thread-1 (]: On test.saas_analytics.relationships_fct_invoices_account_id__account_id__ref_dim_accounts_.1094aa63fc: BEGIN
+[0m04:18:53.049280 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m04:18:53.050517 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:53.051281 [debug] [Thread-1 (]: Using duckdb connection "test.saas_analytics.relationships_fct_invoices_account_id__account_id__ref_dim_accounts_.1094aa63fc"
+[0m04:18:53.052117 [debug] [Thread-1 (]: On test.saas_analytics.relationships_fct_invoices_account_id__account_id__ref_dim_accounts_.1094aa63fc: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "test.saas_analytics.relationships_fct_invoices_account_id__account_id__ref_dim_accounts_.1094aa63fc"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select account_id as from_field
+    from "saas"."marts"."fct_invoices"
+    where account_id is not null
+),
+
+parent as (
+    select account_id as to_field
+    from "saas"."marts"."dim_accounts"
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m04:18:53.056227 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m04:18:53.059238 [debug] [Thread-1 (]: On test.saas_analytics.relationships_fct_invoices_account_id__account_id__ref_dim_accounts_.1094aa63fc: ROLLBACK
+[0m04:18:53.060346 [debug] [Thread-1 (]: On test.saas_analytics.relationships_fct_invoices_account_id__account_id__ref_dim_accounts_.1094aa63fc: Close
+[0m04:18:53.061506 [info ] [Thread-1 (]: 19 of 43 PASS relationships_fct_invoices_account_id__account_id__ref_dim_accounts_  [[32mPASS[0m in 0.04s]
+[0m04:18:53.062763 [debug] [Thread-1 (]: Finished running node test.saas_analytics.relationships_fct_invoices_account_id__account_id__ref_dim_accounts_.1094aa63fc
+[0m04:18:53.063717 [debug] [Thread-1 (]: Began running node test.saas_analytics.unique_fct_invoices_invoice_id.d277b7dc5b
+[0m04:18:53.064711 [info ] [Thread-1 (]: 20 of 43 START test unique_fct_invoices_invoice_id ............................. [RUN]
+[0m04:18:53.065708 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.saas_analytics.relationships_fct_invoices_account_id__account_id__ref_dim_accounts_.1094aa63fc, now test.saas_analytics.unique_fct_invoices_invoice_id.d277b7dc5b)
+[0m04:18:53.066357 [debug] [Thread-1 (]: Began compiling node test.saas_analytics.unique_fct_invoices_invoice_id.d277b7dc5b
+[0m04:18:53.078716 [debug] [Thread-1 (]: Writing injected SQL for node "test.saas_analytics.unique_fct_invoices_invoice_id.d277b7dc5b"
+[0m04:18:53.094282 [debug] [Thread-1 (]: Began executing node test.saas_analytics.unique_fct_invoices_invoice_id.d277b7dc5b
+[0m04:18:53.098121 [debug] [Thread-1 (]: Writing runtime sql for node "test.saas_analytics.unique_fct_invoices_invoice_id.d277b7dc5b"
+[0m04:18:53.100182 [debug] [Thread-1 (]: Using duckdb connection "test.saas_analytics.unique_fct_invoices_invoice_id.d277b7dc5b"
+[0m04:18:53.101132 [debug] [Thread-1 (]: On test.saas_analytics.unique_fct_invoices_invoice_id.d277b7dc5b: BEGIN
+[0m04:18:53.101799 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m04:18:53.103102 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:53.103907 [debug] [Thread-1 (]: Using duckdb connection "test.saas_analytics.unique_fct_invoices_invoice_id.d277b7dc5b"
+[0m04:18:53.104657 [debug] [Thread-1 (]: On test.saas_analytics.unique_fct_invoices_invoice_id.d277b7dc5b: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "test.saas_analytics.unique_fct_invoices_invoice_id.d277b7dc5b"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    invoice_id as unique_field,
+    count(*) as n_records
+
+from "saas"."marts"."fct_invoices"
+where invoice_id is not null
+group by invoice_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m04:18:53.110604 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m04:18:53.113850 [debug] [Thread-1 (]: On test.saas_analytics.unique_fct_invoices_invoice_id.d277b7dc5b: ROLLBACK
+[0m04:18:53.115397 [debug] [Thread-1 (]: On test.saas_analytics.unique_fct_invoices_invoice_id.d277b7dc5b: Close
+[0m04:18:53.116887 [info ] [Thread-1 (]: 20 of 43 PASS unique_fct_invoices_invoice_id ................................... [[32mPASS[0m in 0.05s]
+[0m04:18:53.118402 [debug] [Thread-1 (]: Finished running node test.saas_analytics.unique_fct_invoices_invoice_id.d277b7dc5b
+[0m04:18:53.119436 [debug] [Thread-1 (]: Began running node model.saas_analytics.fct_mrr_monthly
+[0m04:18:53.120750 [info ] [Thread-1 (]: 21 of 43 START sql incremental model marts.fct_mrr_monthly ..................... [RUN]
+[0m04:18:53.122048 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.saas_analytics.unique_fct_invoices_invoice_id.d277b7dc5b, now model.saas_analytics.fct_mrr_monthly)
+[0m04:18:53.123602 [debug] [Thread-1 (]: Began compiling node model.saas_analytics.fct_mrr_monthly
+[0m04:18:53.130458 [debug] [Thread-1 (]: Writing injected SQL for node "model.saas_analytics.fct_mrr_monthly"
+[0m04:18:53.132156 [debug] [Thread-1 (]: Began executing node model.saas_analytics.fct_mrr_monthly
+[0m04:18:53.224284 [debug] [Thread-1 (]: Writing runtime sql for node "model.saas_analytics.fct_mrr_monthly"
+[0m04:18:53.226276 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.fct_mrr_monthly"
+[0m04:18:53.227226 [debug] [Thread-1 (]: On model.saas_analytics.fct_mrr_monthly: BEGIN
+[0m04:18:53.227926 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m04:18:53.229254 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:53.229989 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.fct_mrr_monthly"
+[0m04:18:53.230791 [debug] [Thread-1 (]: On model.saas_analytics.fct_mrr_monthly: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "model.saas_analytics.fct_mrr_monthly"} */
+
+    
+
+    create  table
+      "saas"."marts"."fct_mrr_monthly"
+  
+    
+    as (
+      
+
+-- Monthly recurring revenue at subscription-month grain. Incremental on
+-- mrr_row_id, so re-running a month replaces it instead of double counting.
+
+with subscription_months as (
+
+    select * from "saas"."intermediate"."int_subscription_months"
+    
+
+),
+
+plans as (
+
+    select * from "saas"."staging"."stg_plans"
+
+),
+
+accounts as (
+
+    select account_id, segment, country from "saas"."marts"."dim_accounts"
+
+)
+
+select
+    md5(sm.subscription_id || '|' || cast(sm.month_start as varchar)) as mrr_row_id,
+    sm.month_start,
+    sm.subscription_id,
+    sm.account_id,
+    sm.plan_id,
+    p.plan_name,
+    a.segment,
+    a.country,
+    sm.seats,
+    p.monthly_price_cents,
+    p.monthly_price_cents * sm.seats                            as mrr_cents,
+    
+    round((p.monthly_price_cents * sm.seats) / 100.0, 2)
+  as mrr_usd,
+    sm.is_first_month,
+    sm.is_last_month,
+    sm.status
+from subscription_months sm
+left join plans p using (plan_id)
+left join accounts a using (account_id)
+where p.monthly_price_cents is not null
+    );
+    
+  
+  
+[0m04:18:53.310681 [debug] [Thread-1 (]: SQL status: OK in 0.079 seconds
+[0m04:18:53.313847 [debug] [Thread-1 (]: On model.saas_analytics.fct_mrr_monthly: COMMIT
+[0m04:18:53.314795 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.fct_mrr_monthly"
+[0m04:18:53.315631 [debug] [Thread-1 (]: On model.saas_analytics.fct_mrr_monthly: COMMIT
+[0m04:18:53.326072 [debug] [Thread-1 (]: SQL status: OK in 0.010 seconds
+[0m04:18:53.328110 [debug] [Thread-1 (]: On model.saas_analytics.fct_mrr_monthly: Close
+[0m04:18:53.329322 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7ba9946d-b7b1-469f-a6a6-17ecc817a70c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eb4298aa9c0>]}
+[0m04:18:53.330444 [info ] [Thread-1 (]: 21 of 43 OK created sql incremental model marts.fct_mrr_monthly ................ [[32mOK[0m in 0.21s]
+[0m04:18:53.331660 [debug] [Thread-1 (]: Finished running node model.saas_analytics.fct_mrr_monthly
+[0m04:18:53.332470 [debug] [Thread-1 (]: Began running node snapshot.saas_analytics.snap_accounts
+[0m04:18:53.333956 [info ] [Thread-1 (]: 22 of 43 START snapshot snapshots.snap_accounts ................................ [RUN]
+[0m04:18:53.335013 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.saas_analytics.fct_mrr_monthly, now snapshot.saas_analytics.snap_accounts)
+[0m04:18:53.335731 [debug] [Thread-1 (]: Began compiling node snapshot.saas_analytics.snap_accounts
+[0m04:18:53.340067 [debug] [Thread-1 (]: Writing injected SQL for node "snapshot.saas_analytics.snap_accounts"
+[0m04:18:53.342324 [debug] [Thread-1 (]: Began executing node snapshot.saas_analytics.snap_accounts
+[0m04:18:53.344534 [debug] [Thread-1 (]: Using duckdb connection "snapshot.saas_analytics.snap_accounts"
+[0m04:18:53.345374 [debug] [Thread-1 (]: On snapshot.saas_analytics.snap_accounts: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "snapshot.saas_analytics.snap_accounts"} */
+
+                    select table_name, constraint_type from duckdb_constraints()
+                    where lower(database_name) = lower('saas')
+                      and lower(schema_name) = lower('snapshots')
+                      and constraint_type in ('PRIMARY KEY', 'UNIQUE', 'FOREIGN KEY')
+                    
+[0m04:18:53.346040 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m04:18:53.348723 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m04:18:53.485044 [debug] [Thread-1 (]: Using duckdb connection "snapshot.saas_analytics.snap_accounts"
+[0m04:18:53.486191 [debug] [Thread-1 (]: On snapshot.saas_analytics.snap_accounts: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "snapshot.saas_analytics.snap_accounts"} */
+DESCRIBE (select * from (
+        
+    
+
+    select *,
+        md5(coalesce(cast(account_id as varchar ), '')
+         || '|' || coalesce(cast(now()::timestamp as varchar ), '')
+        ) as dbt_scd_id,
+        now()::timestamp as dbt_updated_at,
+        now()::timestamp as dbt_valid_from,
+        
+  
+  coalesce(nullif(now()::timestamp, now()::timestamp), null)
+  as dbt_valid_to
+from (
+        
+
+
+
+-- Slowly changing dimension type 2 on the account's plan and seats. Running
+-- dbt build again after a plan change adds a new version rather than
+-- overwriting history, which is how you answer "what were they paying in March".
+
+select
+    account_id,
+    account_name,
+    segment,
+    current_plan_name,
+    current_seats,
+    current_mrr_usd
+from "saas"."marts"."dim_accounts"
+
+    ) sbq
+
+
+
+    ) as __dbt_sbq
+    where false
+    limit 0
+)
+[0m04:18:53.490453 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m04:18:53.497644 [debug] [Thread-1 (]: Using duckdb connection "snapshot.saas_analytics.snap_accounts"
+[0m04:18:53.498584 [debug] [Thread-1 (]: On snapshot.saas_analytics.snap_accounts: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "snapshot.saas_analytics.snap_accounts"} */
+DESCRIBE (select * from (
+        select now()::timestamp as dbt_snapshot_time
+    ) as __dbt_sbq
+    where false
+    limit 0
+)
+[0m04:18:53.500630 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:53.501857 [debug] [Thread-1 (]: Writing runtime sql for node "snapshot.saas_analytics.snap_accounts"
+[0m04:18:53.503909 [debug] [Thread-1 (]: Using duckdb connection "snapshot.saas_analytics.snap_accounts"
+[0m04:18:53.504601 [debug] [Thread-1 (]: On snapshot.saas_analytics.snap_accounts: BEGIN
+[0m04:18:53.505709 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m04:18:53.506337 [debug] [Thread-1 (]: Using duckdb connection "snapshot.saas_analytics.snap_accounts"
+[0m04:18:53.507137 [debug] [Thread-1 (]: On snapshot.saas_analytics.snap_accounts: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "snapshot.saas_analytics.snap_accounts"} */
+
+      
+    
+
+    create  table
+      "saas"."snapshots"."snap_accounts"
+  
+    
+    as (
+      
+    
+
+    select *,
+        md5(coalesce(cast(account_id as varchar ), '')
+         || '|' || coalesce(cast(now()::timestamp as varchar ), '')
+        ) as dbt_scd_id,
+        now()::timestamp as dbt_updated_at,
+        now()::timestamp as dbt_valid_from,
+        
+  
+  coalesce(nullif(now()::timestamp, now()::timestamp), null)
+  as dbt_valid_to
+from (
+        
+
+
+
+-- Slowly changing dimension type 2 on the account's plan and seats. Running
+-- dbt build again after a plan change adds a new version rather than
+-- overwriting history, which is how you answer "what were they paying in March".
+
+select
+    account_id,
+    account_name,
+    segment,
+    current_plan_name,
+    current_seats,
+    current_mrr_usd
+from "saas"."marts"."dim_accounts"
+
+    ) sbq
+
+
+
+    );
+    
+  
+  
+[0m04:18:53.512807 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m04:18:53.515763 [debug] [Thread-1 (]: On snapshot.saas_analytics.snap_accounts: COMMIT
+[0m04:18:53.516491 [debug] [Thread-1 (]: Using duckdb connection "snapshot.saas_analytics.snap_accounts"
+[0m04:18:53.517232 [debug] [Thread-1 (]: On snapshot.saas_analytics.snap_accounts: COMMIT
+[0m04:18:53.522150 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m04:18:53.523989 [debug] [Thread-1 (]: On snapshot.saas_analytics.snap_accounts: Close
+[0m04:18:53.525073 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7ba9946d-b7b1-469f-a6a6-17ecc817a70c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eb4283d3140>]}
+[0m04:18:53.526478 [info ] [Thread-1 (]: 22 of 43 OK snapshotted snapshots.snap_accounts ................................ [[32mOK[0m in 0.19s]
+[0m04:18:53.527745 [debug] [Thread-1 (]: Finished running node snapshot.saas_analytics.snap_accounts
+[0m04:18:53.528710 [debug] [Thread-1 (]: Began running node test.saas_analytics.assert_mrr_never_negative
+[0m04:18:53.529610 [info ] [Thread-1 (]: 23 of 43 START test assert_mrr_never_negative .................................. [RUN]
+[0m04:18:53.530542 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly snapshot.saas_analytics.snap_accounts, now test.saas_analytics.assert_mrr_never_negative)
+[0m04:18:53.531261 [debug] [Thread-1 (]: Began compiling node test.saas_analytics.assert_mrr_never_negative
+[0m04:18:53.534265 [debug] [Thread-1 (]: Writing injected SQL for node "test.saas_analytics.assert_mrr_never_negative"
+[0m04:18:53.535721 [debug] [Thread-1 (]: Began executing node test.saas_analytics.assert_mrr_never_negative
+[0m04:18:53.538987 [debug] [Thread-1 (]: Writing runtime sql for node "test.saas_analytics.assert_mrr_never_negative"
+[0m04:18:53.540732 [debug] [Thread-1 (]: Using duckdb connection "test.saas_analytics.assert_mrr_never_negative"
+[0m04:18:53.541386 [debug] [Thread-1 (]: On test.saas_analytics.assert_mrr_never_negative: BEGIN
+[0m04:18:53.542016 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m04:18:53.543295 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:53.543987 [debug] [Thread-1 (]: Using duckdb connection "test.saas_analytics.assert_mrr_never_negative"
+[0m04:18:53.544697 [debug] [Thread-1 (]: On test.saas_analytics.assert_mrr_never_negative: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "test.saas_analytics.assert_mrr_never_negative"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  -- MRR is plan price x seats. Neither can be negative, so a negative MRR row
+-- means the seats join or the price cast has broken.
+
+select
+    mrr_row_id,
+    mrr_cents
+from "saas"."marts"."fct_mrr_monthly"
+where mrr_cents <= 0
+  
+  
+      
+    ) dbt_internal_test
+[0m04:18:53.547080 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m04:18:53.549922 [debug] [Thread-1 (]: On test.saas_analytics.assert_mrr_never_negative: ROLLBACK
+[0m04:18:53.550951 [debug] [Thread-1 (]: On test.saas_analytics.assert_mrr_never_negative: Close
+[0m04:18:53.552071 [info ] [Thread-1 (]: 23 of 43 PASS assert_mrr_never_negative ........................................ [[32mPASS[0m in 0.02s]
+[0m04:18:53.553220 [debug] [Thread-1 (]: Finished running node test.saas_analytics.assert_mrr_never_negative
+[0m04:18:53.554092 [debug] [Thread-1 (]: Began running node test.saas_analytics.assert_no_future_months
+[0m04:18:53.555398 [info ] [Thread-1 (]: 24 of 43 START test assert_no_future_months .................................... [RUN]
+[0m04:18:53.556393 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.saas_analytics.assert_mrr_never_negative, now test.saas_analytics.assert_no_future_months)
+[0m04:18:53.557120 [debug] [Thread-1 (]: Began compiling node test.saas_analytics.assert_no_future_months
+[0m04:18:53.560575 [debug] [Thread-1 (]: Writing injected SQL for node "test.saas_analytics.assert_no_future_months"
+[0m04:18:53.562244 [debug] [Thread-1 (]: Began executing node test.saas_analytics.assert_no_future_months
+[0m04:18:53.565031 [debug] [Thread-1 (]: Writing runtime sql for node "test.saas_analytics.assert_no_future_months"
+[0m04:18:53.566804 [debug] [Thread-1 (]: Using duckdb connection "test.saas_analytics.assert_no_future_months"
+[0m04:18:53.567490 [debug] [Thread-1 (]: On test.saas_analytics.assert_no_future_months: BEGIN
+[0m04:18:53.568119 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m04:18:53.569357 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:53.570044 [debug] [Thread-1 (]: Using duckdb connection "test.saas_analytics.assert_no_future_months"
+[0m04:18:53.570794 [debug] [Thread-1 (]: On test.saas_analytics.assert_no_future_months: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "test.saas_analytics.assert_no_future_months"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  -- The month spine must stop at the analysis end month, otherwise the pipeline
+-- quietly invents revenue for months that have not happened.
+
+select
+    month_start
+from "saas"."marts"."fct_mrr_monthly"
+where month_start > date '2026-10-01'
+  
+  
+      
+    ) dbt_internal_test
+[0m04:18:53.573125 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m04:18:53.575886 [debug] [Thread-1 (]: On test.saas_analytics.assert_no_future_months: ROLLBACK
+[0m04:18:53.577014 [debug] [Thread-1 (]: On test.saas_analytics.assert_no_future_months: Close
+[0m04:18:53.578349 [info ] [Thread-1 (]: 24 of 43 PASS assert_no_future_months .......................................... [[32mPASS[0m in 0.02s]
+[0m04:18:53.579538 [debug] [Thread-1 (]: Finished running node test.saas_analytics.assert_no_future_months
+[0m04:18:53.580311 [debug] [Thread-1 (]: Began running node test.saas_analytics.assert_one_active_subscription_per_account_month
+[0m04:18:53.581189 [info ] [Thread-1 (]: 25 of 43 START test assert_one_active_subscription_per_account_month ........... [RUN]
+[0m04:18:53.582189 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.saas_analytics.assert_no_future_months, now test.saas_analytics.assert_one_active_subscription_per_account_month)
+[0m04:18:53.582912 [debug] [Thread-1 (]: Began compiling node test.saas_analytics.assert_one_active_subscription_per_account_month
+[0m04:18:53.586262 [debug] [Thread-1 (]: Writing injected SQL for node "test.saas_analytics.assert_one_active_subscription_per_account_month"
+[0m04:18:53.594589 [debug] [Thread-1 (]: Began executing node test.saas_analytics.assert_one_active_subscription_per_account_month
+[0m04:18:53.597749 [debug] [Thread-1 (]: Writing runtime sql for node "test.saas_analytics.assert_one_active_subscription_per_account_month"
+[0m04:18:53.599592 [debug] [Thread-1 (]: Using duckdb connection "test.saas_analytics.assert_one_active_subscription_per_account_month"
+[0m04:18:53.600396 [debug] [Thread-1 (]: On test.saas_analytics.assert_one_active_subscription_per_account_month: BEGIN
+[0m04:18:53.601070 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m04:18:53.602325 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:53.603063 [debug] [Thread-1 (]: Using duckdb connection "test.saas_analytics.assert_one_active_subscription_per_account_month"
+[0m04:18:53.603784 [debug] [Thread-1 (]: On test.saas_analytics.assert_one_active_subscription_per_account_month: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "test.saas_analytics.assert_one_active_subscription_per_account_month"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  -- An account should never be billed on two overlapping subscriptions in the
+-- same month - that is a double-billing bug, not a data quirk.
+
+select
+    month_start,
+    account_id,
+    count(*) as active_subscriptions
+from "saas"."marts"."fct_mrr_monthly"
+group by month_start, account_id
+having count(*) > 1
+  
+  
+      
+    ) dbt_internal_test
+[0m04:18:53.608439 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m04:18:53.612426 [debug] [Thread-1 (]: On test.saas_analytics.assert_one_active_subscription_per_account_month: ROLLBACK
+[0m04:18:53.614015 [debug] [Thread-1 (]: On test.saas_analytics.assert_one_active_subscription_per_account_month: Close
+[0m04:18:53.615237 [info ] [Thread-1 (]: 25 of 43 PASS assert_one_active_subscription_per_account_month ................. [[32mPASS[0m in 0.03s]
+[0m04:18:53.616392 [debug] [Thread-1 (]: Finished running node test.saas_analytics.assert_one_active_subscription_per_account_month
+[0m04:18:53.617289 [debug] [Thread-1 (]: Began running node test.saas_analytics.not_null_fct_mrr_monthly_month_start.5e2f85a9ea
+[0m04:18:53.618139 [info ] [Thread-1 (]: 26 of 43 START test not_null_fct_mrr_monthly_month_start ....................... [RUN]
+[0m04:18:53.619119 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.saas_analytics.assert_one_active_subscription_per_account_month, now test.saas_analytics.not_null_fct_mrr_monthly_month_start.5e2f85a9ea)
+[0m04:18:53.619854 [debug] [Thread-1 (]: Began compiling node test.saas_analytics.not_null_fct_mrr_monthly_month_start.5e2f85a9ea
+[0m04:18:53.632372 [debug] [Thread-1 (]: Writing injected SQL for node "test.saas_analytics.not_null_fct_mrr_monthly_month_start.5e2f85a9ea"
+[0m04:18:53.634145 [debug] [Thread-1 (]: Began executing node test.saas_analytics.not_null_fct_mrr_monthly_month_start.5e2f85a9ea
+[0m04:18:53.637026 [debug] [Thread-1 (]: Writing runtime sql for node "test.saas_analytics.not_null_fct_mrr_monthly_month_start.5e2f85a9ea"
+[0m04:18:53.638717 [debug] [Thread-1 (]: Using duckdb connection "test.saas_analytics.not_null_fct_mrr_monthly_month_start.5e2f85a9ea"
+[0m04:18:53.639426 [debug] [Thread-1 (]: On test.saas_analytics.not_null_fct_mrr_monthly_month_start.5e2f85a9ea: BEGIN
+[0m04:18:53.640050 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m04:18:53.641228 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:53.641874 [debug] [Thread-1 (]: Using duckdb connection "test.saas_analytics.not_null_fct_mrr_monthly_month_start.5e2f85a9ea"
+[0m04:18:53.642529 [debug] [Thread-1 (]: On test.saas_analytics.not_null_fct_mrr_monthly_month_start.5e2f85a9ea: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "test.saas_analytics.not_null_fct_mrr_monthly_month_start.5e2f85a9ea"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select month_start
+from "saas"."marts"."fct_mrr_monthly"
+where month_start is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m04:18:53.644947 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m04:18:53.648270 [debug] [Thread-1 (]: On test.saas_analytics.not_null_fct_mrr_monthly_month_start.5e2f85a9ea: ROLLBACK
+[0m04:18:53.649811 [debug] [Thread-1 (]: On test.saas_analytics.not_null_fct_mrr_monthly_month_start.5e2f85a9ea: Close
+[0m04:18:53.650962 [info ] [Thread-1 (]: 26 of 43 PASS not_null_fct_mrr_monthly_month_start ............................. [[32mPASS[0m in 0.03s]
+[0m04:18:53.652125 [debug] [Thread-1 (]: Finished running node test.saas_analytics.not_null_fct_mrr_monthly_month_start.5e2f85a9ea
+[0m04:18:53.652984 [debug] [Thread-1 (]: Began running node test.saas_analytics.not_null_fct_mrr_monthly_mrr_cents.18bf528c61
+[0m04:18:53.653813 [info ] [Thread-1 (]: 27 of 43 START test not_null_fct_mrr_monthly_mrr_cents ......................... [RUN]
+[0m04:18:53.654831 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.saas_analytics.not_null_fct_mrr_monthly_month_start.5e2f85a9ea, now test.saas_analytics.not_null_fct_mrr_monthly_mrr_cents.18bf528c61)
+[0m04:18:53.655552 [debug] [Thread-1 (]: Began compiling node test.saas_analytics.not_null_fct_mrr_monthly_mrr_cents.18bf528c61
+[0m04:18:53.667725 [debug] [Thread-1 (]: Writing injected SQL for node "test.saas_analytics.not_null_fct_mrr_monthly_mrr_cents.18bf528c61"
+[0m04:18:53.669531 [debug] [Thread-1 (]: Began executing node test.saas_analytics.not_null_fct_mrr_monthly_mrr_cents.18bf528c61
+[0m04:18:53.672433 [debug] [Thread-1 (]: Writing runtime sql for node "test.saas_analytics.not_null_fct_mrr_monthly_mrr_cents.18bf528c61"
+[0m04:18:53.674220 [debug] [Thread-1 (]: Using duckdb connection "test.saas_analytics.not_null_fct_mrr_monthly_mrr_cents.18bf528c61"
+[0m04:18:53.675073 [debug] [Thread-1 (]: On test.saas_analytics.not_null_fct_mrr_monthly_mrr_cents.18bf528c61: BEGIN
+[0m04:18:53.675756 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m04:18:53.677067 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:53.677781 [debug] [Thread-1 (]: Using duckdb connection "test.saas_analytics.not_null_fct_mrr_monthly_mrr_cents.18bf528c61"
+[0m04:18:53.694142 [debug] [Thread-1 (]: On test.saas_analytics.not_null_fct_mrr_monthly_mrr_cents.18bf528c61: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "test.saas_analytics.not_null_fct_mrr_monthly_mrr_cents.18bf528c61"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select mrr_cents
+from "saas"."marts"."fct_mrr_monthly"
+where mrr_cents is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m04:18:53.696628 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m04:18:53.699504 [debug] [Thread-1 (]: On test.saas_analytics.not_null_fct_mrr_monthly_mrr_cents.18bf528c61: ROLLBACK
+[0m04:18:53.700626 [debug] [Thread-1 (]: On test.saas_analytics.not_null_fct_mrr_monthly_mrr_cents.18bf528c61: Close
+[0m04:18:53.701791 [info ] [Thread-1 (]: 27 of 43 PASS not_null_fct_mrr_monthly_mrr_cents ............................... [[32mPASS[0m in 0.05s]
+[0m04:18:53.703009 [debug] [Thread-1 (]: Finished running node test.saas_analytics.not_null_fct_mrr_monthly_mrr_cents.18bf528c61
+[0m04:18:53.703870 [debug] [Thread-1 (]: Began running node test.saas_analytics.not_null_fct_mrr_monthly_mrr_row_id.0af88e644f
+[0m04:18:53.704741 [info ] [Thread-1 (]: 28 of 43 START test not_null_fct_mrr_monthly_mrr_row_id ........................ [RUN]
+[0m04:18:53.705676 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.saas_analytics.not_null_fct_mrr_monthly_mrr_cents.18bf528c61, now test.saas_analytics.not_null_fct_mrr_monthly_mrr_row_id.0af88e644f)
+[0m04:18:53.706324 [debug] [Thread-1 (]: Began compiling node test.saas_analytics.not_null_fct_mrr_monthly_mrr_row_id.0af88e644f
+[0m04:18:53.719504 [debug] [Thread-1 (]: Writing injected SQL for node "test.saas_analytics.not_null_fct_mrr_monthly_mrr_row_id.0af88e644f"
+[0m04:18:53.721232 [debug] [Thread-1 (]: Began executing node test.saas_analytics.not_null_fct_mrr_monthly_mrr_row_id.0af88e644f
+[0m04:18:53.724393 [debug] [Thread-1 (]: Writing runtime sql for node "test.saas_analytics.not_null_fct_mrr_monthly_mrr_row_id.0af88e644f"
+[0m04:18:53.726205 [debug] [Thread-1 (]: Using duckdb connection "test.saas_analytics.not_null_fct_mrr_monthly_mrr_row_id.0af88e644f"
+[0m04:18:53.726978 [debug] [Thread-1 (]: On test.saas_analytics.not_null_fct_mrr_monthly_mrr_row_id.0af88e644f: BEGIN
+[0m04:18:53.727639 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m04:18:53.728824 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:53.729459 [debug] [Thread-1 (]: Using duckdb connection "test.saas_analytics.not_null_fct_mrr_monthly_mrr_row_id.0af88e644f"
+[0m04:18:53.730202 [debug] [Thread-1 (]: On test.saas_analytics.not_null_fct_mrr_monthly_mrr_row_id.0af88e644f: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "test.saas_analytics.not_null_fct_mrr_monthly_mrr_row_id.0af88e644f"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select mrr_row_id
+from "saas"."marts"."fct_mrr_monthly"
+where mrr_row_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m04:18:53.732441 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:53.735291 [debug] [Thread-1 (]: On test.saas_analytics.not_null_fct_mrr_monthly_mrr_row_id.0af88e644f: ROLLBACK
+[0m04:18:53.736913 [debug] [Thread-1 (]: On test.saas_analytics.not_null_fct_mrr_monthly_mrr_row_id.0af88e644f: Close
+[0m04:18:53.738334 [info ] [Thread-1 (]: 28 of 43 PASS not_null_fct_mrr_monthly_mrr_row_id .............................. [[32mPASS[0m in 0.03s]
+[0m04:18:53.739770 [debug] [Thread-1 (]: Finished running node test.saas_analytics.not_null_fct_mrr_monthly_mrr_row_id.0af88e644f
+[0m04:18:53.740637 [debug] [Thread-1 (]: Began running node test.saas_analytics.not_null_fct_mrr_monthly_subscription_id.792f2714a9
+[0m04:18:53.741465 [info ] [Thread-1 (]: 29 of 43 START test not_null_fct_mrr_monthly_subscription_id ................... [RUN]
+[0m04:18:53.742453 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.saas_analytics.not_null_fct_mrr_monthly_mrr_row_id.0af88e644f, now test.saas_analytics.not_null_fct_mrr_monthly_subscription_id.792f2714a9)
+[0m04:18:53.743188 [debug] [Thread-1 (]: Began compiling node test.saas_analytics.not_null_fct_mrr_monthly_subscription_id.792f2714a9
+[0m04:18:53.756384 [debug] [Thread-1 (]: Writing injected SQL for node "test.saas_analytics.not_null_fct_mrr_monthly_subscription_id.792f2714a9"
+[0m04:18:53.758304 [debug] [Thread-1 (]: Began executing node test.saas_analytics.not_null_fct_mrr_monthly_subscription_id.792f2714a9
+[0m04:18:53.761291 [debug] [Thread-1 (]: Writing runtime sql for node "test.saas_analytics.not_null_fct_mrr_monthly_subscription_id.792f2714a9"
+[0m04:18:53.763268 [debug] [Thread-1 (]: Using duckdb connection "test.saas_analytics.not_null_fct_mrr_monthly_subscription_id.792f2714a9"
+[0m04:18:53.764103 [debug] [Thread-1 (]: On test.saas_analytics.not_null_fct_mrr_monthly_subscription_id.792f2714a9: BEGIN
+[0m04:18:53.764802 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m04:18:53.766104 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:53.766828 [debug] [Thread-1 (]: Using duckdb connection "test.saas_analytics.not_null_fct_mrr_monthly_subscription_id.792f2714a9"
+[0m04:18:53.767520 [debug] [Thread-1 (]: On test.saas_analytics.not_null_fct_mrr_monthly_subscription_id.792f2714a9: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "test.saas_analytics.not_null_fct_mrr_monthly_subscription_id.792f2714a9"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select subscription_id
+from "saas"."marts"."fct_mrr_monthly"
+where subscription_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m04:18:53.769582 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:53.772300 [debug] [Thread-1 (]: On test.saas_analytics.not_null_fct_mrr_monthly_subscription_id.792f2714a9: ROLLBACK
+[0m04:18:53.773460 [debug] [Thread-1 (]: On test.saas_analytics.not_null_fct_mrr_monthly_subscription_id.792f2714a9: Close
+[0m04:18:53.774621 [info ] [Thread-1 (]: 29 of 43 PASS not_null_fct_mrr_monthly_subscription_id ......................... [[32mPASS[0m in 0.03s]
+[0m04:18:53.775812 [debug] [Thread-1 (]: Finished running node test.saas_analytics.not_null_fct_mrr_monthly_subscription_id.792f2714a9
+[0m04:18:53.776593 [debug] [Thread-1 (]: Began running node test.saas_analytics.relationships_fct_mrr_monthly_subscription_id__subscription_id__ref_stg_subscriptions_.f31db37f66
+[0m04:18:53.777556 [info ] [Thread-1 (]: 30 of 43 START test relationships_fct_mrr_monthly_subscription_id__subscription_id__ref_stg_subscriptions_  [RUN]
+[0m04:18:53.778486 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.saas_analytics.not_null_fct_mrr_monthly_subscription_id.792f2714a9, now test.saas_analytics.relationships_fct_mrr_monthly_subscription_id__subscription_id__ref_stg_subscriptions_.f31db37f66)
+[0m04:18:53.779282 [debug] [Thread-1 (]: Began compiling node test.saas_analytics.relationships_fct_mrr_monthly_subscription_id__subscription_id__ref_stg_subscriptions_.f31db37f66
+[0m04:18:53.806797 [debug] [Thread-1 (]: Writing injected SQL for node "test.saas_analytics.relationships_fct_mrr_monthly_subscription_id__subscription_id__ref_stg_subscriptions_.f31db37f66"
+[0m04:18:53.808593 [debug] [Thread-1 (]: Began executing node test.saas_analytics.relationships_fct_mrr_monthly_subscription_id__subscription_id__ref_stg_subscriptions_.f31db37f66
+[0m04:18:53.811514 [debug] [Thread-1 (]: Writing runtime sql for node "test.saas_analytics.relationships_fct_mrr_monthly_subscription_id__subscription_id__ref_stg_subscriptions_.f31db37f66"
+[0m04:18:53.813500 [debug] [Thread-1 (]: Using duckdb connection "test.saas_analytics.relationships_fct_mrr_monthly_subscription_id__subscription_id__ref_stg_subscriptions_.f31db37f66"
+[0m04:18:53.814324 [debug] [Thread-1 (]: On test.saas_analytics.relationships_fct_mrr_monthly_subscription_id__subscription_id__ref_stg_subscriptions_.f31db37f66: BEGIN
+[0m04:18:53.814975 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m04:18:53.816229 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:53.816963 [debug] [Thread-1 (]: Using duckdb connection "test.saas_analytics.relationships_fct_mrr_monthly_subscription_id__subscription_id__ref_stg_subscriptions_.f31db37f66"
+[0m04:18:53.817724 [debug] [Thread-1 (]: On test.saas_analytics.relationships_fct_mrr_monthly_subscription_id__subscription_id__ref_stg_subscriptions_.f31db37f66: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "test.saas_analytics.relationships_fct_mrr_monthly_subscription_id__subscription_id__ref_stg_subscriptions_.f31db37f66"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select subscription_id as from_field
+    from "saas"."marts"."fct_mrr_monthly"
+    where subscription_id is not null
+),
+
+parent as (
+    select subscription_id as to_field
+    from "saas"."staging"."stg_subscriptions"
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m04:18:53.831883 [debug] [Thread-1 (]: SQL status: OK in 0.013 seconds
+[0m04:18:53.834944 [debug] [Thread-1 (]: On test.saas_analytics.relationships_fct_mrr_monthly_subscription_id__subscription_id__ref_stg_subscriptions_.f31db37f66: ROLLBACK
+[0m04:18:53.836519 [debug] [Thread-1 (]: On test.saas_analytics.relationships_fct_mrr_monthly_subscription_id__subscription_id__ref_stg_subscriptions_.f31db37f66: Close
+[0m04:18:53.837838 [info ] [Thread-1 (]: 30 of 43 PASS relationships_fct_mrr_monthly_subscription_id__subscription_id__ref_stg_subscriptions_  [[32mPASS[0m in 0.06s]
+[0m04:18:53.839069 [debug] [Thread-1 (]: Finished running node test.saas_analytics.relationships_fct_mrr_monthly_subscription_id__subscription_id__ref_stg_subscriptions_.f31db37f66
+[0m04:18:53.839871 [debug] [Thread-1 (]: Began running node test.saas_analytics.unique_fct_mrr_monthly_mrr_row_id.70fa27082f
+[0m04:18:53.840767 [info ] [Thread-1 (]: 31 of 43 START test unique_fct_mrr_monthly_mrr_row_id .......................... [RUN]
+[0m04:18:53.841740 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.saas_analytics.relationships_fct_mrr_monthly_subscription_id__subscription_id__ref_stg_subscriptions_.f31db37f66, now test.saas_analytics.unique_fct_mrr_monthly_mrr_row_id.70fa27082f)
+[0m04:18:53.842414 [debug] [Thread-1 (]: Began compiling node test.saas_analytics.unique_fct_mrr_monthly_mrr_row_id.70fa27082f
+[0m04:18:53.854506 [debug] [Thread-1 (]: Writing injected SQL for node "test.saas_analytics.unique_fct_mrr_monthly_mrr_row_id.70fa27082f"
+[0m04:18:53.856341 [debug] [Thread-1 (]: Began executing node test.saas_analytics.unique_fct_mrr_monthly_mrr_row_id.70fa27082f
+[0m04:18:53.859265 [debug] [Thread-1 (]: Writing runtime sql for node "test.saas_analytics.unique_fct_mrr_monthly_mrr_row_id.70fa27082f"
+[0m04:18:53.861112 [debug] [Thread-1 (]: Using duckdb connection "test.saas_analytics.unique_fct_mrr_monthly_mrr_row_id.70fa27082f"
+[0m04:18:53.861837 [debug] [Thread-1 (]: On test.saas_analytics.unique_fct_mrr_monthly_mrr_row_id.70fa27082f: BEGIN
+[0m04:18:53.862514 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m04:18:53.863870 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:53.864592 [debug] [Thread-1 (]: Using duckdb connection "test.saas_analytics.unique_fct_mrr_monthly_mrr_row_id.70fa27082f"
+[0m04:18:53.865327 [debug] [Thread-1 (]: On test.saas_analytics.unique_fct_mrr_monthly_mrr_row_id.70fa27082f: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "test.saas_analytics.unique_fct_mrr_monthly_mrr_row_id.70fa27082f"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    mrr_row_id as unique_field,
+    count(*) as n_records
+
+from "saas"."marts"."fct_mrr_monthly"
+where mrr_row_id is not null
+group by mrr_row_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m04:18:53.869434 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m04:18:53.873543 [debug] [Thread-1 (]: On test.saas_analytics.unique_fct_mrr_monthly_mrr_row_id.70fa27082f: ROLLBACK
+[0m04:18:53.875505 [debug] [Thread-1 (]: On test.saas_analytics.unique_fct_mrr_monthly_mrr_row_id.70fa27082f: Close
+[0m04:18:53.876789 [info ] [Thread-1 (]: 31 of 43 PASS unique_fct_mrr_monthly_mrr_row_id ................................ [[32mPASS[0m in 0.03s]
+[0m04:18:53.877933 [debug] [Thread-1 (]: Finished running node test.saas_analytics.unique_fct_mrr_monthly_mrr_row_id.70fa27082f
+[0m04:18:53.879802 [debug] [Thread-1 (]: Began running node model.saas_analytics.mart_churn_cohorts
+[0m04:18:53.880912 [info ] [Thread-1 (]: 32 of 43 START sql table model marts.mart_churn_cohorts ........................ [RUN]
+[0m04:18:53.882019 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.saas_analytics.unique_fct_mrr_monthly_mrr_row_id.70fa27082f, now model.saas_analytics.mart_churn_cohorts)
+[0m04:18:53.882764 [debug] [Thread-1 (]: Began compiling node model.saas_analytics.mart_churn_cohorts
+[0m04:18:53.893653 [debug] [Thread-1 (]: Writing injected SQL for node "model.saas_analytics.mart_churn_cohorts"
+[0m04:18:53.895697 [debug] [Thread-1 (]: Began executing node model.saas_analytics.mart_churn_cohorts
+[0m04:18:53.901739 [debug] [Thread-1 (]: Writing runtime sql for node "model.saas_analytics.mart_churn_cohorts"
+[0m04:18:53.903772 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.mart_churn_cohorts"
+[0m04:18:53.904556 [debug] [Thread-1 (]: On model.saas_analytics.mart_churn_cohorts: BEGIN
+[0m04:18:53.905211 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m04:18:53.906433 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:53.907178 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.mart_churn_cohorts"
+[0m04:18:53.907933 [debug] [Thread-1 (]: On model.saas_analytics.mart_churn_cohorts: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "model.saas_analytics.mart_churn_cohorts"} */
+
+    
+
+    create  table
+      "saas"."marts"."mart_churn_cohorts__dbt_tmp"
+  
+    
+    as (
+      -- Cohort retention: of the accounts that started in month X, how many are still
+-- paying N months later. The classic "is the leak getting worse" chart.
+
+with accounts as (
+
+    select account_id, cohort_month from "saas"."marts"."dim_accounts"
+
+),
+
+active as (
+
+    select distinct
+        account_id,
+        month_start
+    from "saas"."marts"."fct_mrr_monthly"
+    where mrr_cents > 0
+
+),
+
+cohort_sizes as (
+
+    select cohort_month, count(*) as cohort_accounts
+    from accounts
+    group by cohort_month
+
+),
+
+retention as (
+
+    select
+        a.cohort_month,
+        date_diff('month', a.cohort_month, ac.month_start) as months_since_start,
+        count(distinct a.account_id)                       as retained_accounts
+    from accounts a
+    inner join active ac using (account_id)
+    group by a.cohort_month, months_since_start
+
+)
+
+select
+    r.cohort_month,
+    r.months_since_start,
+    c.cohort_accounts,
+    r.retained_accounts,
+    
+    round(
+        (r.retained_accounts * 100)::decimal(18, 6) / nullif(c.cohort_accounts, 0),
+        2
+    )
+ as retention_pct
+from retention r
+inner join cohort_sizes c using (cohort_month)
+where r.months_since_start between 0 and 11
+order by r.cohort_month, r.months_since_start
+    );
+    
+  
+[0m04:18:53.922096 [debug] [Thread-1 (]: SQL status: OK in 0.013 seconds
+[0m04:18:53.926895 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.mart_churn_cohorts"
+[0m04:18:53.927841 [debug] [Thread-1 (]: On model.saas_analytics.mart_churn_cohorts: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "model.saas_analytics.mart_churn_cohorts"} */
+alter table "saas"."marts"."mart_churn_cohorts__dbt_tmp" rename to "mart_churn_cohorts"
+[0m04:18:53.929644 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:53.932529 [debug] [Thread-1 (]: On model.saas_analytics.mart_churn_cohorts: COMMIT
+[0m04:18:53.933457 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.mart_churn_cohorts"
+[0m04:18:53.934256 [debug] [Thread-1 (]: On model.saas_analytics.mart_churn_cohorts: COMMIT
+[0m04:18:53.938951 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m04:18:53.942058 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.mart_churn_cohorts"
+[0m04:18:53.942939 [debug] [Thread-1 (]: On model.saas_analytics.mart_churn_cohorts: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "model.saas_analytics.mart_churn_cohorts"} */
+
+      drop table if exists "saas"."marts"."mart_churn_cohorts__dbt_backup" cascade
+    
+[0m04:18:53.944460 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:53.947195 [debug] [Thread-1 (]: On model.saas_analytics.mart_churn_cohorts: Close
+[0m04:18:53.948426 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7ba9946d-b7b1-469f-a6a6-17ecc817a70c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eb42830f140>]}
+[0m04:18:53.949646 [info ] [Thread-1 (]: 32 of 43 OK created sql table model marts.mart_churn_cohorts ................... [[32mOK[0m in 0.07s]
+[0m04:18:53.950849 [debug] [Thread-1 (]: Finished running node model.saas_analytics.mart_churn_cohorts
+[0m04:18:53.951648 [debug] [Thread-1 (]: Began running node model.saas_analytics.mart_mrr_summary
+[0m04:18:53.953128 [info ] [Thread-1 (]: 33 of 43 START sql table model marts.mart_mrr_summary .......................... [RUN]
+[0m04:18:53.954288 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.saas_analytics.mart_churn_cohorts, now model.saas_analytics.mart_mrr_summary)
+[0m04:18:53.955390 [debug] [Thread-1 (]: Began compiling node model.saas_analytics.mart_mrr_summary
+[0m04:18:53.960321 [debug] [Thread-1 (]: Writing injected SQL for node "model.saas_analytics.mart_mrr_summary"
+[0m04:18:53.961999 [debug] [Thread-1 (]: Began executing node model.saas_analytics.mart_mrr_summary
+[0m04:18:53.967522 [debug] [Thread-1 (]: Writing runtime sql for node "model.saas_analytics.mart_mrr_summary"
+[0m04:18:53.969474 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.mart_mrr_summary"
+[0m04:18:53.970306 [debug] [Thread-1 (]: On model.saas_analytics.mart_mrr_summary: BEGIN
+[0m04:18:53.971002 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m04:18:53.972265 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:53.972932 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.mart_mrr_summary"
+[0m04:18:53.973759 [debug] [Thread-1 (]: On model.saas_analytics.mart_mrr_summary: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "model.saas_analytics.mart_mrr_summary"} */
+
+    
+
+    create  table
+      "saas"."marts"."mart_mrr_summary__dbt_tmp"
+  
+    
+    as (
+      -- Monthly MRR movement: the number a founder asks for first.
+-- new = subscriptions starting this month, churned = subscriptions ending this
+-- month, net new = movement between this month and the previous one.
+
+with monthly as (
+
+    select
+        month_start,
+        sum(mrr_usd)                                    as mrr_usd,
+        count(distinct account_id)                      as paying_accounts,
+        sum(case when is_first_month then mrr_usd else 0 end)  as new_mrr_usd,
+        sum(case when is_last_month and status = 'churned' then mrr_usd else 0 end) as churned_mrr_usd
+    from "saas"."marts"."fct_mrr_monthly"
+    group by month_start
+
+),
+
+with_previous as (
+
+    select
+        *,
+        lag(mrr_usd) over (order by month_start) as previous_mrr_usd
+    from monthly
+
+)
+
+select
+    month_start,
+    mrr_usd,
+    previous_mrr_usd,
+    round(mrr_usd - coalesce(previous_mrr_usd, 0), 2)      as net_new_mrr_usd,
+    new_mrr_usd,
+    churned_mrr_usd,
+    paying_accounts,
+    
+    round(
+        (mrr_usd)::decimal(18, 6) / nullif(paying_accounts, 0),
+        2
+    )
+     as arpu_usd,
+    
+    round(
+        (mrr_usd * 12)::decimal(18, 6) / nullif(1, 0),
+        2
+    )
+              as arr_usd,
+    
+    round(
+        (mrr_usd - coalesce(previous_mrr_usd, 0))::decimal(18, 6) / nullif(previous_mrr_usd, 0),
+        4
+    )
+ as mom_growth_rate
+from with_previous
+order by month_start
+    );
+    
+  
+[0m04:18:54.002620 [debug] [Thread-1 (]: SQL status: OK in 0.028 seconds
+[0m04:18:54.007180 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.mart_mrr_summary"
+[0m04:18:54.007936 [debug] [Thread-1 (]: On model.saas_analytics.mart_mrr_summary: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "model.saas_analytics.mart_mrr_summary"} */
+alter table "saas"."marts"."mart_mrr_summary__dbt_tmp" rename to "mart_mrr_summary"
+[0m04:18:54.009479 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:54.012259 [debug] [Thread-1 (]: On model.saas_analytics.mart_mrr_summary: COMMIT
+[0m04:18:54.013244 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.mart_mrr_summary"
+[0m04:18:54.014094 [debug] [Thread-1 (]: On model.saas_analytics.mart_mrr_summary: COMMIT
+[0m04:18:54.018818 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m04:18:54.021889 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.mart_mrr_summary"
+[0m04:18:54.022793 [debug] [Thread-1 (]: On model.saas_analytics.mart_mrr_summary: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "model.saas_analytics.mart_mrr_summary"} */
+
+      drop table if exists "saas"."marts"."mart_mrr_summary__dbt_backup" cascade
+    
+[0m04:18:54.024364 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:54.026946 [debug] [Thread-1 (]: On model.saas_analytics.mart_mrr_summary: Close
+[0m04:18:54.028012 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7ba9946d-b7b1-469f-a6a6-17ecc817a70c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eb428369a60>]}
+[0m04:18:54.029062 [info ] [Thread-1 (]: 33 of 43 OK created sql table model marts.mart_mrr_summary ..................... [[32mOK[0m in 0.07s]
+[0m04:18:54.030209 [debug] [Thread-1 (]: Finished running node model.saas_analytics.mart_mrr_summary
+[0m04:18:54.031104 [debug] [Thread-1 (]: Began running node model.saas_analytics.mart_revenue_by_plan
+[0m04:18:54.032261 [info ] [Thread-1 (]: 34 of 43 START sql table model marts.mart_revenue_by_plan ...................... [RUN]
+[0m04:18:54.033607 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.saas_analytics.mart_mrr_summary, now model.saas_analytics.mart_revenue_by_plan)
+[0m04:18:54.034310 [debug] [Thread-1 (]: Began compiling node model.saas_analytics.mart_revenue_by_plan
+[0m04:18:54.040033 [debug] [Thread-1 (]: Writing injected SQL for node "model.saas_analytics.mart_revenue_by_plan"
+[0m04:18:54.041761 [debug] [Thread-1 (]: Began executing node model.saas_analytics.mart_revenue_by_plan
+[0m04:18:54.047386 [debug] [Thread-1 (]: Writing runtime sql for node "model.saas_analytics.mart_revenue_by_plan"
+[0m04:18:54.049294 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.mart_revenue_by_plan"
+[0m04:18:54.050055 [debug] [Thread-1 (]: On model.saas_analytics.mart_revenue_by_plan: BEGIN
+[0m04:18:54.050673 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m04:18:54.051908 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:54.052553 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.mart_revenue_by_plan"
+[0m04:18:54.053326 [debug] [Thread-1 (]: On model.saas_analytics.mart_revenue_by_plan: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "model.saas_analytics.mart_revenue_by_plan"} */
+
+    
+
+    create  table
+      "saas"."marts"."mart_revenue_by_plan__dbt_tmp"
+  
+    
+    as (
+      -- Plan mix: which tier carries the revenue, and what it costs to acquire it
+-- in seats. Useful for pricing conversations.
+
+with mrr as (
+
+    select * from "saas"."marts"."fct_mrr_monthly"
+    where month_start = (select max(month_start) from "saas"."marts"."fct_mrr_monthly")
+
+)
+
+select
+    plan_name,
+    count(distinct account_id)                          as accounts,
+    sum(seats)                                          as seats,
+    round(sum(mrr_usd), 2)                              as mrr_usd,
+    
+    round(
+        (sum(mrr_usd))::decimal(18, 6) / nullif(count(distinct account_id), 0),
+        2
+    )
+ as mrr_per_account,
+    
+    round(
+        (sum(mrr_usd) * 100)::decimal(18, 6) / nullif(sum(sum(mrr_usd)) over (), 0),
+        2
+    )
+ as pct_of_total_mrr
+from mrr
+group by plan_name
+order by mrr_usd desc
+    );
+    
+  
+[0m04:18:54.064161 [debug] [Thread-1 (]: SQL status: OK in 0.010 seconds
+[0m04:18:54.068718 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.mart_revenue_by_plan"
+[0m04:18:54.069595 [debug] [Thread-1 (]: On model.saas_analytics.mart_revenue_by_plan: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "model.saas_analytics.mart_revenue_by_plan"} */
+alter table "saas"."marts"."mart_revenue_by_plan__dbt_tmp" rename to "mart_revenue_by_plan"
+[0m04:18:54.071097 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:54.073769 [debug] [Thread-1 (]: On model.saas_analytics.mart_revenue_by_plan: COMMIT
+[0m04:18:54.074663 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.mart_revenue_by_plan"
+[0m04:18:54.075489 [debug] [Thread-1 (]: On model.saas_analytics.mart_revenue_by_plan: COMMIT
+[0m04:18:54.079651 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m04:18:54.096011 [debug] [Thread-1 (]: Using duckdb connection "model.saas_analytics.mart_revenue_by_plan"
+[0m04:18:54.096994 [debug] [Thread-1 (]: On model.saas_analytics.mart_revenue_by_plan: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "model.saas_analytics.mart_revenue_by_plan"} */
+
+      drop table if exists "saas"."marts"."mart_revenue_by_plan__dbt_backup" cascade
+    
+[0m04:18:54.098913 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:54.101767 [debug] [Thread-1 (]: On model.saas_analytics.mart_revenue_by_plan: Close
+[0m04:18:54.102846 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7ba9946d-b7b1-469f-a6a6-17ecc817a70c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eb428f64ad0>]}
+[0m04:18:54.103969 [info ] [Thread-1 (]: 34 of 43 OK created sql table model marts.mart_revenue_by_plan ................. [[32mOK[0m in 0.07s]
+[0m04:18:54.105139 [debug] [Thread-1 (]: Finished running node model.saas_analytics.mart_revenue_by_plan
+[0m04:18:54.105951 [debug] [Thread-1 (]: Began running node test.saas_analytics.assert_retention_within_bounds
+[0m04:18:54.107191 [info ] [Thread-1 (]: 35 of 43 START test assert_retention_within_bounds ............................. [RUN]
+[0m04:18:54.108202 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.saas_analytics.mart_revenue_by_plan, now test.saas_analytics.assert_retention_within_bounds)
+[0m04:18:54.108899 [debug] [Thread-1 (]: Began compiling node test.saas_analytics.assert_retention_within_bounds
+[0m04:18:54.111859 [debug] [Thread-1 (]: Writing injected SQL for node "test.saas_analytics.assert_retention_within_bounds"
+[0m04:18:54.113521 [debug] [Thread-1 (]: Began executing node test.saas_analytics.assert_retention_within_bounds
+[0m04:18:54.116392 [debug] [Thread-1 (]: Writing runtime sql for node "test.saas_analytics.assert_retention_within_bounds"
+[0m04:18:54.117872 [debug] [Thread-1 (]: Using duckdb connection "test.saas_analytics.assert_retention_within_bounds"
+[0m04:18:54.118573 [debug] [Thread-1 (]: On test.saas_analytics.assert_retention_within_bounds: BEGIN
+[0m04:18:54.119262 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m04:18:54.120553 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:54.121243 [debug] [Thread-1 (]: Using duckdb connection "test.saas_analytics.assert_retention_within_bounds"
+[0m04:18:54.122037 [debug] [Thread-1 (]: On test.saas_analytics.assert_retention_within_bounds: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "test.saas_analytics.assert_retention_within_bounds"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  -- Retention is a percentage of a cohort, so it must sit between 0 and 100.
+
+select
+    cohort_month,
+    months_since_start,
+    retention_pct
+from "saas"."marts"."mart_churn_cohorts"
+where retention_pct < 0 or retention_pct > 100
+  
+  
+      
+    ) dbt_internal_test
+[0m04:18:54.124729 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m04:18:54.127758 [debug] [Thread-1 (]: On test.saas_analytics.assert_retention_within_bounds: ROLLBACK
+[0m04:18:54.128911 [debug] [Thread-1 (]: On test.saas_analytics.assert_retention_within_bounds: Close
+[0m04:18:54.130043 [info ] [Thread-1 (]: 35 of 43 PASS assert_retention_within_bounds ................................... [[32mPASS[0m in 0.02s]
+[0m04:18:54.131190 [debug] [Thread-1 (]: Finished running node test.saas_analytics.assert_retention_within_bounds
+[0m04:18:54.131993 [debug] [Thread-1 (]: Began running node test.saas_analytics.not_null_mart_churn_cohorts_retention_pct.b371d581a1
+[0m04:18:54.132835 [info ] [Thread-1 (]: 36 of 43 START test not_null_mart_churn_cohorts_retention_pct .................. [RUN]
+[0m04:18:54.133741 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.saas_analytics.assert_retention_within_bounds, now test.saas_analytics.not_null_mart_churn_cohorts_retention_pct.b371d581a1)
+[0m04:18:54.134413 [debug] [Thread-1 (]: Began compiling node test.saas_analytics.not_null_mart_churn_cohorts_retention_pct.b371d581a1
+[0m04:18:54.148506 [debug] [Thread-1 (]: Writing injected SQL for node "test.saas_analytics.not_null_mart_churn_cohorts_retention_pct.b371d581a1"
+[0m04:18:54.150900 [debug] [Thread-1 (]: Began executing node test.saas_analytics.not_null_mart_churn_cohorts_retention_pct.b371d581a1
+[0m04:18:54.154104 [debug] [Thread-1 (]: Writing runtime sql for node "test.saas_analytics.not_null_mart_churn_cohorts_retention_pct.b371d581a1"
+[0m04:18:54.156086 [debug] [Thread-1 (]: Using duckdb connection "test.saas_analytics.not_null_mart_churn_cohorts_retention_pct.b371d581a1"
+[0m04:18:54.156900 [debug] [Thread-1 (]: On test.saas_analytics.not_null_mart_churn_cohorts_retention_pct.b371d581a1: BEGIN
+[0m04:18:54.157617 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m04:18:54.159032 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:54.159768 [debug] [Thread-1 (]: Using duckdb connection "test.saas_analytics.not_null_mart_churn_cohorts_retention_pct.b371d581a1"
+[0m04:18:54.160467 [debug] [Thread-1 (]: On test.saas_analytics.not_null_mart_churn_cohorts_retention_pct.b371d581a1: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "test.saas_analytics.not_null_mart_churn_cohorts_retention_pct.b371d581a1"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select retention_pct
+from "saas"."marts"."mart_churn_cohorts"
+where retention_pct is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m04:18:54.162526 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:54.165291 [debug] [Thread-1 (]: On test.saas_analytics.not_null_mart_churn_cohorts_retention_pct.b371d581a1: ROLLBACK
+[0m04:18:54.166343 [debug] [Thread-1 (]: On test.saas_analytics.not_null_mart_churn_cohorts_retention_pct.b371d581a1: Close
+[0m04:18:54.167634 [info ] [Thread-1 (]: 36 of 43 PASS not_null_mart_churn_cohorts_retention_pct ........................ [[32mPASS[0m in 0.03s]
+[0m04:18:54.168770 [debug] [Thread-1 (]: Finished running node test.saas_analytics.not_null_mart_churn_cohorts_retention_pct.b371d581a1
+[0m04:18:54.169613 [debug] [Thread-1 (]: Began running node exposure.saas_analytics.mrr_dashboard
+[0m04:18:54.170529 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.saas_analytics.not_null_mart_churn_cohorts_retention_pct.b371d581a1, now exposure.saas_analytics.mrr_dashboard)
+[0m04:18:54.171226 [debug] [Thread-1 (]: Began compiling node exposure.saas_analytics.mrr_dashboard
+[0m04:18:54.171913 [debug] [Thread-1 (]: Began executing node exposure.saas_analytics.mrr_dashboard
+[0m04:18:54.172853 [info ] [Thread-1 (]: 37 of 43 NO-OP exposure mrr_dashboard .......................................... [[33mNO-OP[0m in 0.00s]
+[0m04:18:54.173856 [debug] [Thread-1 (]: Finished running node exposure.saas_analytics.mrr_dashboard
+[0m04:18:54.174602 [debug] [Thread-1 (]: Began running node test.saas_analytics.not_null_mart_mrr_summary_month_start.4b524f6192
+[0m04:18:54.175391 [info ] [Thread-1 (]: 38 of 43 START test not_null_mart_mrr_summary_month_start ...................... [RUN]
+[0m04:18:54.176293 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly exposure.saas_analytics.mrr_dashboard, now test.saas_analytics.not_null_mart_mrr_summary_month_start.4b524f6192)
+[0m04:18:54.193682 [debug] [Thread-1 (]: Began compiling node test.saas_analytics.not_null_mart_mrr_summary_month_start.4b524f6192
+[0m04:18:54.206492 [debug] [Thread-1 (]: Writing injected SQL for node "test.saas_analytics.not_null_mart_mrr_summary_month_start.4b524f6192"
+[0m04:18:54.208478 [debug] [Thread-1 (]: Began executing node test.saas_analytics.not_null_mart_mrr_summary_month_start.4b524f6192
+[0m04:18:54.211458 [debug] [Thread-1 (]: Writing runtime sql for node "test.saas_analytics.not_null_mart_mrr_summary_month_start.4b524f6192"
+[0m04:18:54.213355 [debug] [Thread-1 (]: Using duckdb connection "test.saas_analytics.not_null_mart_mrr_summary_month_start.4b524f6192"
+[0m04:18:54.214211 [debug] [Thread-1 (]: On test.saas_analytics.not_null_mart_mrr_summary_month_start.4b524f6192: BEGIN
+[0m04:18:54.214991 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m04:18:54.216275 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:54.217038 [debug] [Thread-1 (]: Using duckdb connection "test.saas_analytics.not_null_mart_mrr_summary_month_start.4b524f6192"
+[0m04:18:54.217745 [debug] [Thread-1 (]: On test.saas_analytics.not_null_mart_mrr_summary_month_start.4b524f6192: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "test.saas_analytics.not_null_mart_mrr_summary_month_start.4b524f6192"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select month_start
+from "saas"."marts"."mart_mrr_summary"
+where month_start is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m04:18:54.220000 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:54.222786 [debug] [Thread-1 (]: On test.saas_analytics.not_null_mart_mrr_summary_month_start.4b524f6192: ROLLBACK
+[0m04:18:54.223891 [debug] [Thread-1 (]: On test.saas_analytics.not_null_mart_mrr_summary_month_start.4b524f6192: Close
+[0m04:18:54.225025 [info ] [Thread-1 (]: 38 of 43 PASS not_null_mart_mrr_summary_month_start ............................ [[32mPASS[0m in 0.05s]
+[0m04:18:54.226131 [debug] [Thread-1 (]: Finished running node test.saas_analytics.not_null_mart_mrr_summary_month_start.4b524f6192
+[0m04:18:54.227063 [debug] [Thread-1 (]: Began running node test.saas_analytics.not_null_mart_mrr_summary_mrr_usd.dce65762ac
+[0m04:18:54.228051 [info ] [Thread-1 (]: 39 of 43 START test not_null_mart_mrr_summary_mrr_usd .......................... [RUN]
+[0m04:18:54.229050 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.saas_analytics.not_null_mart_mrr_summary_month_start.4b524f6192, now test.saas_analytics.not_null_mart_mrr_summary_mrr_usd.dce65762ac)
+[0m04:18:54.229822 [debug] [Thread-1 (]: Began compiling node test.saas_analytics.not_null_mart_mrr_summary_mrr_usd.dce65762ac
+[0m04:18:54.241949 [debug] [Thread-1 (]: Writing injected SQL for node "test.saas_analytics.not_null_mart_mrr_summary_mrr_usd.dce65762ac"
+[0m04:18:54.243711 [debug] [Thread-1 (]: Began executing node test.saas_analytics.not_null_mart_mrr_summary_mrr_usd.dce65762ac
+[0m04:18:54.246424 [debug] [Thread-1 (]: Writing runtime sql for node "test.saas_analytics.not_null_mart_mrr_summary_mrr_usd.dce65762ac"
+[0m04:18:54.248456 [debug] [Thread-1 (]: Using duckdb connection "test.saas_analytics.not_null_mart_mrr_summary_mrr_usd.dce65762ac"
+[0m04:18:54.249252 [debug] [Thread-1 (]: On test.saas_analytics.not_null_mart_mrr_summary_mrr_usd.dce65762ac: BEGIN
+[0m04:18:54.249865 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m04:18:54.251152 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:54.251825 [debug] [Thread-1 (]: Using duckdb connection "test.saas_analytics.not_null_mart_mrr_summary_mrr_usd.dce65762ac"
+[0m04:18:54.252534 [debug] [Thread-1 (]: On test.saas_analytics.not_null_mart_mrr_summary_mrr_usd.dce65762ac: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "test.saas_analytics.not_null_mart_mrr_summary_mrr_usd.dce65762ac"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select mrr_usd
+from "saas"."marts"."mart_mrr_summary"
+where mrr_usd is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m04:18:54.255575 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m04:18:54.259112 [debug] [Thread-1 (]: On test.saas_analytics.not_null_mart_mrr_summary_mrr_usd.dce65762ac: ROLLBACK
+[0m04:18:54.260696 [debug] [Thread-1 (]: On test.saas_analytics.not_null_mart_mrr_summary_mrr_usd.dce65762ac: Close
+[0m04:18:54.261967 [info ] [Thread-1 (]: 39 of 43 PASS not_null_mart_mrr_summary_mrr_usd ................................ [[32mPASS[0m in 0.03s]
+[0m04:18:54.263117 [debug] [Thread-1 (]: Finished running node test.saas_analytics.not_null_mart_mrr_summary_mrr_usd.dce65762ac
+[0m04:18:54.264055 [debug] [Thread-1 (]: Began running node test.saas_analytics.unique_mart_mrr_summary_month_start.284f25d47f
+[0m04:18:54.264929 [info ] [Thread-1 (]: 40 of 43 START test unique_mart_mrr_summary_month_start ........................ [RUN]
+[0m04:18:54.265907 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.saas_analytics.not_null_mart_mrr_summary_mrr_usd.dce65762ac, now test.saas_analytics.unique_mart_mrr_summary_month_start.284f25d47f)
+[0m04:18:54.266568 [debug] [Thread-1 (]: Began compiling node test.saas_analytics.unique_mart_mrr_summary_month_start.284f25d47f
+[0m04:18:54.278610 [debug] [Thread-1 (]: Writing injected SQL for node "test.saas_analytics.unique_mart_mrr_summary_month_start.284f25d47f"
+[0m04:18:54.280336 [debug] [Thread-1 (]: Began executing node test.saas_analytics.unique_mart_mrr_summary_month_start.284f25d47f
+[0m04:18:54.283319 [debug] [Thread-1 (]: Writing runtime sql for node "test.saas_analytics.unique_mart_mrr_summary_month_start.284f25d47f"
+[0m04:18:54.294660 [debug] [Thread-1 (]: Using duckdb connection "test.saas_analytics.unique_mart_mrr_summary_month_start.284f25d47f"
+[0m04:18:54.295359 [debug] [Thread-1 (]: On test.saas_analytics.unique_mart_mrr_summary_month_start.284f25d47f: BEGIN
+[0m04:18:54.296112 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m04:18:54.297462 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:54.298154 [debug] [Thread-1 (]: Using duckdb connection "test.saas_analytics.unique_mart_mrr_summary_month_start.284f25d47f"
+[0m04:18:54.298896 [debug] [Thread-1 (]: On test.saas_analytics.unique_mart_mrr_summary_month_start.284f25d47f: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "test.saas_analytics.unique_mart_mrr_summary_month_start.284f25d47f"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    month_start as unique_field,
+    count(*) as n_records
+
+from "saas"."marts"."mart_mrr_summary"
+where month_start is not null
+group by month_start
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m04:18:54.301720 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m04:18:54.304800 [debug] [Thread-1 (]: On test.saas_analytics.unique_mart_mrr_summary_month_start.284f25d47f: ROLLBACK
+[0m04:18:54.306361 [debug] [Thread-1 (]: On test.saas_analytics.unique_mart_mrr_summary_month_start.284f25d47f: Close
+[0m04:18:54.307733 [info ] [Thread-1 (]: 40 of 43 PASS unique_mart_mrr_summary_month_start .............................. [[32mPASS[0m in 0.04s]
+[0m04:18:54.308988 [debug] [Thread-1 (]: Finished running node test.saas_analytics.unique_mart_mrr_summary_month_start.284f25d47f
+[0m04:18:54.309763 [debug] [Thread-1 (]: Began running node exposure.saas_analytics.retention_review
+[0m04:18:54.310626 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.saas_analytics.unique_mart_mrr_summary_month_start.284f25d47f, now exposure.saas_analytics.retention_review)
+[0m04:18:54.311265 [debug] [Thread-1 (]: Began compiling node exposure.saas_analytics.retention_review
+[0m04:18:54.311876 [debug] [Thread-1 (]: Began executing node exposure.saas_analytics.retention_review
+[0m04:18:54.312870 [info ] [Thread-1 (]: 41 of 43 NO-OP exposure retention_review ....................................... [[33mNO-OP[0m in 0.00s]
+[0m04:18:54.313992 [debug] [Thread-1 (]: Finished running node exposure.saas_analytics.retention_review
+[0m04:18:54.314794 [debug] [Thread-1 (]: Began running node test.saas_analytics.not_null_mart_revenue_by_plan_plan_name.967bccdb19
+[0m04:18:54.315692 [info ] [Thread-1 (]: 42 of 43 START test not_null_mart_revenue_by_plan_plan_name .................... [RUN]
+[0m04:18:54.316610 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly exposure.saas_analytics.retention_review, now test.saas_analytics.not_null_mart_revenue_by_plan_plan_name.967bccdb19)
+[0m04:18:54.317376 [debug] [Thread-1 (]: Began compiling node test.saas_analytics.not_null_mart_revenue_by_plan_plan_name.967bccdb19
+[0m04:18:54.330558 [debug] [Thread-1 (]: Writing injected SQL for node "test.saas_analytics.not_null_mart_revenue_by_plan_plan_name.967bccdb19"
+[0m04:18:54.332348 [debug] [Thread-1 (]: Began executing node test.saas_analytics.not_null_mart_revenue_by_plan_plan_name.967bccdb19
+[0m04:18:54.335275 [debug] [Thread-1 (]: Writing runtime sql for node "test.saas_analytics.not_null_mart_revenue_by_plan_plan_name.967bccdb19"
+[0m04:18:54.337158 [debug] [Thread-1 (]: Using duckdb connection "test.saas_analytics.not_null_mart_revenue_by_plan_plan_name.967bccdb19"
+[0m04:18:54.337850 [debug] [Thread-1 (]: On test.saas_analytics.not_null_mart_revenue_by_plan_plan_name.967bccdb19: BEGIN
+[0m04:18:54.338514 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m04:18:54.339866 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:54.340557 [debug] [Thread-1 (]: Using duckdb connection "test.saas_analytics.not_null_mart_revenue_by_plan_plan_name.967bccdb19"
+[0m04:18:54.341216 [debug] [Thread-1 (]: On test.saas_analytics.not_null_mart_revenue_by_plan_plan_name.967bccdb19: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "test.saas_analytics.not_null_mart_revenue_by_plan_plan_name.967bccdb19"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select plan_name
+from "saas"."marts"."mart_revenue_by_plan"
+where plan_name is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m04:18:54.343282 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:54.346014 [debug] [Thread-1 (]: On test.saas_analytics.not_null_mart_revenue_by_plan_plan_name.967bccdb19: ROLLBACK
+[0m04:18:54.347167 [debug] [Thread-1 (]: On test.saas_analytics.not_null_mart_revenue_by_plan_plan_name.967bccdb19: Close
+[0m04:18:54.348508 [info ] [Thread-1 (]: 42 of 43 PASS not_null_mart_revenue_by_plan_plan_name .......................... [[32mPASS[0m in 0.03s]
+[0m04:18:54.349888 [debug] [Thread-1 (]: Finished running node test.saas_analytics.not_null_mart_revenue_by_plan_plan_name.967bccdb19
+[0m04:18:54.350740 [debug] [Thread-1 (]: Began running node test.saas_analytics.unique_mart_revenue_by_plan_plan_name.9058e7eb17
+[0m04:18:54.351607 [info ] [Thread-1 (]: 43 of 43 START test unique_mart_revenue_by_plan_plan_name ...................... [RUN]
+[0m04:18:54.353443 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.saas_analytics.not_null_mart_revenue_by_plan_plan_name.967bccdb19, now test.saas_analytics.unique_mart_revenue_by_plan_plan_name.9058e7eb17)
+[0m04:18:54.354992 [debug] [Thread-1 (]: Began compiling node test.saas_analytics.unique_mart_revenue_by_plan_plan_name.9058e7eb17
+[0m04:18:54.368292 [debug] [Thread-1 (]: Writing injected SQL for node "test.saas_analytics.unique_mart_revenue_by_plan_plan_name.9058e7eb17"
+[0m04:18:54.370166 [debug] [Thread-1 (]: Began executing node test.saas_analytics.unique_mart_revenue_by_plan_plan_name.9058e7eb17
+[0m04:18:54.373012 [debug] [Thread-1 (]: Writing runtime sql for node "test.saas_analytics.unique_mart_revenue_by_plan_plan_name.9058e7eb17"
+[0m04:18:54.374879 [debug] [Thread-1 (]: Using duckdb connection "test.saas_analytics.unique_mart_revenue_by_plan_plan_name.9058e7eb17"
+[0m04:18:54.375734 [debug] [Thread-1 (]: On test.saas_analytics.unique_mart_revenue_by_plan_plan_name.9058e7eb17: BEGIN
+[0m04:18:54.376457 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m04:18:54.377795 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m04:18:54.378456 [debug] [Thread-1 (]: Using duckdb connection "test.saas_analytics.unique_mart_revenue_by_plan_plan_name.9058e7eb17"
+[0m04:18:54.379224 [debug] [Thread-1 (]: On test.saas_analytics.unique_mart_revenue_by_plan_plan_name.9058e7eb17: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "saas_analytics", "target_name": "dev", "node_id": "test.saas_analytics.unique_mart_revenue_by_plan_plan_name.9058e7eb17"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    plan_name as unique_field,
+    count(*) as n_records
+
+from "saas"."marts"."mart_revenue_by_plan"
+where plan_name is not null
+group by plan_name
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m04:18:54.382565 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m04:18:54.385754 [debug] [Thread-1 (]: On test.saas_analytics.unique_mart_revenue_by_plan_plan_name.9058e7eb17: ROLLBACK
+[0m04:18:54.393458 [debug] [Thread-1 (]: On test.saas_analytics.unique_mart_revenue_by_plan_plan_name.9058e7eb17: Close
+[0m04:18:54.394613 [info ] [Thread-1 (]: 43 of 43 PASS unique_mart_revenue_by_plan_plan_name ............................ [[32mPASS[0m in 0.04s]
+[0m04:18:54.395788 [debug] [Thread-1 (]: Finished running node test.saas_analytics.unique_mart_revenue_by_plan_plan_name.9058e7eb17
+[0m04:18:54.400162 [debug] [MainThread]: Using duckdb connection "master"
+[0m04:18:54.400952 [debug] [MainThread]: On master: BEGIN
+[0m04:18:54.401585 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m04:18:54.402760 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m04:18:54.403436 [debug] [MainThread]: On master: COMMIT
+[0m04:18:54.404025 [debug] [MainThread]: Using duckdb connection "master"
+[0m04:18:54.404576 [debug] [MainThread]: On master: COMMIT
+[0m04:18:54.405434 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m04:18:54.406093 [debug] [MainThread]: On master: Close
+[0m04:18:54.406994 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m04:18:54.407510 [debug] [MainThread]: Connection 'test.saas_analytics.unique_mart_revenue_by_plan_plan_name.9058e7eb17' was properly closed.
+[0m04:18:54.408232 [info ] [MainThread]: 
+[0m04:18:54.408937 [info ] [MainThread]: Finished running 2 exposures, 1 incremental model, 1 snapshot, 5 table models, 27 data tests, 7 view models in 0 hours 0 minutes and 4.29 seconds (4.29s).
+[0m04:18:54.421781 [debug] [MainThread]: Command end result
+[0m04:18:54.518924 [debug] [MainThread]: Wrote artifact WritableManifest to /scratch/work/dbt-saas-analytics/target/manifest.json
+[0m04:18:54.524524 [debug] [MainThread]: Wrote artifact SemanticManifest to /scratch/work/dbt-saas-analytics/target/semantic_manifest.json
+[0m04:18:54.529357 [debug] [MainThread]: Wrote artifact OsiDocument to /scratch/work/dbt-saas-analytics/target/osi_document.json
+[0m04:18:54.546794 [debug] [MainThread]: Wrote artifact RunExecutionResult to /scratch/work/dbt-saas-analytics/target/run_results.json
+[0m04:18:54.547520 [info ] [MainThread]: 
+[0m04:18:54.548283 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m04:18:54.549164 [info ] [MainThread]: 
+[0m04:18:54.550017 [info ] [MainThread]: Done. PASS=41 WARN=0 ERROR=0 SKIP=0 NO-OP=2 REUSED=0 TOTAL=43
+[0m04:18:54.553189 [debug] [MainThread]: Resource report: {"command_name": "build", "command_success": true, "command_wall_clock_time": 15.73975, "process_in_blocks": "0", "process_kernel_time": 1.48, "process_mem_max_rss": "304024", "process_out_blocks": "0", "process_user_time": 21.28}
+[0m04:18:54.554185 [debug] [MainThread]: Command `dbt build` succeeded at 04:18:54.553968 after 15.74 seconds
+[0m04:18:54.555008 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eb433776ea0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eb42f89db80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eb4297f5310>]}
+[0m04:18:54.555759 [debug] [MainThread]: Flushing usage events
+[0m04:18:54.572964 [debug] [MainThread]: An error was encountered while trying to flush usage events

@@ -1,0 +1,73 @@
+version: 2
+
+models:
+  - name: dim_accounts
+    description: One row per customer account with its current plan and MRR.
+    columns:
+      - name: account_id
+        description: Natural key of the account.
+        data_tests:
+          - unique
+          - not_null
+      - name: segment
+        description: Commercial segment (smb, mid, enterprise).
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['smb', 'mid', 'enterprise']
+      - name: cohort_month
+        description: Month the account was created, used for cohort retention.
+        data_tests:
+          - not_null
+
+  - name: fct_mrr_monthly
+    description: >
+      Monthly recurring revenue at one row per subscription per active month.
+      The spine for every MRR, expansion and churn metric.
+    columns:
+      - name: mrr_row_id
+        description: Hash of subscription_id and month_start - the incremental key.
+        data_tests:
+          - unique
+          - not_null
+      - name: subscription_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_subscriptions')
+                field: subscription_id
+      - name: mrr_cents
+        description: Plan price x seats, in cents.
+        data_tests:
+          - not_null
+      - name: month_start
+        data_tests:
+          - not_null
+
+  - name: fct_invoices
+    description: One row per invoice with payment behaviour and days-to-pay.
+    columns:
+      - name: invoice_id
+        data_tests:
+          - unique
+          - not_null
+      - name: account_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_accounts')
+                field: account_id
+      - name: status
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['paid', 'open', 'void']
+      - name: payment_speed
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['same day', '0-7 days', '8-30 days', '30+ days']
+              config:
+                where: "is_paid"

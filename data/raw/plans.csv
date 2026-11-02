@@ -1,0 +1,5 @@
+plan_id,plan_name,monthly_price_cents,billing_interval
+PLAN-STARTER,Starter,2900,monthly
+PLAN-GROWTH,GROWTH,9900,monthly
+PLAN-SCALE,Scale,24900,monthly
+PLAN-ENTERPRISE,ENTERPRISE,74900,monthly

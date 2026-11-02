@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: mart_mrr_summary
+    description: Monthly MRR, ARR, net new MRR and ARPU.
+    columns:
+      - name: month_start
+        data_tests:
+          - unique
+          - not_null
+      - name: mrr_usd
+        description: Total MRR for the month.
+        data_tests:
+          - not_null
+
+  - name: mart_churn_cohorts
+    description: Retention by signup cohort and months since start.
+    columns:
+      - name: retention_pct
+        description: Share of the cohort still paying, as a percentage.
+        data_tests:
+          - not_null
+
+  - name: mart_revenue_by_plan
+    description: Current-month MRR split by plan tier.
+    columns:
+      - name: plan_name
+        data_tests:
+          - unique
+          - not_null
